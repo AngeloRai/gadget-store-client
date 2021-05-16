@@ -1,0 +1,20 @@
+.product-img {
+  height: auto;
+  width: 50px;
+  object-fit: cover;
+}
+
+.card-fixed-height {
+  height: 330px;
+  max-height: 330px;
+}
+
+.card-img-container {
+  height: 100px;
+  max-height: 100px;
+}
+
+.card-title-fixed-height {
+  height: 57px;
+  max-height: 57px;
+}
