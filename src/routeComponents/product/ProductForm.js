@@ -139,6 +139,7 @@ function ProductForm(props) {
       <div className="form-group">
         <label htmlFor="gadgetFormImage">Gadget Picture</label>
         <input
+          multiple
           type="file"
           className="form-control"
           id="gadgetFormImage"

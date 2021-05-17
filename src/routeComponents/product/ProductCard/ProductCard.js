@@ -15,7 +15,7 @@ function ProductCard(props) {
         <div className="card-img-container d-flex justify-content-center align-items-center">
           <img
             className="card-img product-img"
-            src={props.product.image_url}
+            src={props.product.image_url[0]}
             alt="product"
           />
         </div>

@@ -10,7 +10,7 @@ function Navbar() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: "#0a0a0a"}}>
       <div className="ml-3">
         <NavLink className="navbar-brand" to="/">
           Prime Gadgets
@@ -53,7 +53,7 @@ function Navbar() {
 
           <li className="nav-item">
             <NavLink className="nav-link" activeClassName="active" to="/all">
-              All Beers
+              All Products
             </NavLink>
           </li>
         </ul>
@@ -63,7 +63,7 @@ function Navbar() {
               <Cart />
 
               <Dropdown>
-                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                <Dropdown.Toggle id="dropdown-basic" style={{backgroundColor: "#0a0a0a", border: "none"}}>
                   <img
                     src={`https://ui-avatars.com/api/?name=${loggedInUser.user.name}&size=32&background=random`}
                     className="rounded-circle"
