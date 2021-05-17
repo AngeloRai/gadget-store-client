@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import ProductList from "../ProductList/ProductList";
 import api from "../../../apis/index";
 import './Home.css'
@@ -24,12 +25,21 @@ function ProductFeed() {
     <div className="container-fluid" style={{ paddingBottom: "100px" }}>
       {/* Contains all the lists shown in the home-screen */}
       <div className="container-fluid movie-app">
-        {/* Series found List */}
+        {/* New iphones List */}
         <ProductList
-          listTitle="Used Iphones"
-          contentList={products.filter((product)=>product.category==="mobile"&&product.condition==="USED")}
+          listTitle="New Iphones"
+          contentList={products.filter((product) => product.category === "mobile" && product.condition === "NEW")}
         />
       </div>
+      {/* Used iphones List */}
+      <ProductList
+        listTitle="Used Iphones"
+        contentList={products.filter((product) => product.category === "mobile" && product.condition === "USED")}
+      />
+      <ProductList
+        listTitle="All Iphones"
+        contentList={products}
+      />
     </div>
   );
 

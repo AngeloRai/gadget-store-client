@@ -1,4 +1,4 @@
-.image-container {
+/* .image-container {
   position: relative;
   transition: 0.1s;
 }
@@ -22,4 +22,8 @@
   font-size: 12px;
   padding: 20px;
   text-align: center;
+} */
+
+.product-list {
+  max-width: 80%;
 }
