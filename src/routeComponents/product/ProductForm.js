@@ -1,184 +1,133 @@
-// {
-//   name: "",
-//   category: "",
-//   model: "",
-//   brand: "",
-//   description: "",
-//   discount: "",
-//   image_url: "",
-//   cost: 0,
-//   price: 0,
-//   qtt_in_stock: 0,
-//   color: '',
-//   condition: ''
-// }
-
 
 function ProductForm(props) {
   return (
     <form className="mb-5" onSubmit={props.handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="productFormCategory">Category</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormCategory"
-          name="category"
-          onChange={props.handleChange}
-          value={props.state.category}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="productFormBrand">Brand</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormBrand"
-          name="brand"
-          onChange={props.handleChange}
-          value={props.state.brand}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="productFormModel">Model</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormModel"
-          name="model"
-          onChange={props.handleChange}
-          value={props.state.model}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormFirstBrewed">First Brewed In</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormFirstBrewed"
-          name="first_brewed"
-          onChange={props.handleChange}
-          value={props.state.first_brewed}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormDescription">Description</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormDescription"
-          name="description"
-          onChange={props.handleChange}
-          value={props.state.description}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormImage">Beer Picture</label>
-        <input
-          type="file"
-          className="form-control"
-          id="productFormImage"
-          name="image_url"
-          onChange={props.handleChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormAbv">Alcohol by volume (ABV%)</label>
-        <input
-          type="number"
-          className="form-control"
-          id="productFormAbv"
-          name="abv"
-          onChange={props.handleChange}
-          value={props.state.abv}
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="productFormFoodPairing">Food Pairings</label>
-        <input
-          type="text"
-          className="form-control"
-          id="productFormFoodPairing"
-          name="food_pairing"
-          onChange={props.handleChange}
-          value={props.state.food_pairing}
-        />
-      </div>
-
+      
       <div className="form-row">
-        <div className="form-group col">
-          <label htmlFor="productFormAuthor">Contributed By (Author)</label>
+        <div className="form-group col mr-2">
+          <label htmlFor="gadgetFormCategory">Category</label>
           <input
             type="text"
             className="form-control"
-            id="productFormAuthor"
-            name="contributed_by"
+            id="gadgetFormCategory"
+            name="category"
             onChange={props.handleChange}
-            value={props.state.contributed_by}
+            value={props.state.category}
+          />
+        </div>
+        <div className="form-group col mx-2">
+          <label htmlFor="gadgetFormModel">Model</label>
+          <input
+            type="text"
+            className="form-control"
+            id="gadgetFormModel"
+            name="model"
+            onChange={props.handleChange}
+            value={props.state.model}
+          />
+        </div>
+  
+        <div className="form-group col ml-2">
+          <label htmlFor="gadgetFormBrand">Brand</label>
+          <input
+            type="text"
+            className="form-control"
+            id="gadgetFormBrand"
+            name="brand"
+            onChange={props.handleChange}
+            value={props.state.brand}
           />
         </div>
 
         <div className="form-group col">
-          <label htmlFor="productFormExpireDate">Expiration Date</label>
+          <label htmlFor="gadgetFormColor">Color</label>
           <input
-            type="date"
+            type="text"
             className="form-control"
-            id="productFormExpireDate"
-            name="expire_date"
+            id="gadgetFormColor"
+            name="color"
             onChange={props.handleChange}
-            value={props.state.expire_date}
+            value={props.state.color}
           />
         </div>
       </div>
 
-      <div className="form-row">
-        <div className="form-group col">
-          <label htmlFor="productFormCost">Cost</label>
+      <div className="form-group">
+          <label htmlFor="gadgetFormDescription">Description</label>
+          <input
+            type="text"
+            className="form-control"
+            id="gadgetFormDescription"
+            name="description"
+            onChange={props.handleChange}
+            value={props.state.description}
+          />
+        </div>
+
+     <div className="form-row">
+        <div className="form-group col mr-2">
+          <label htmlFor="gadgetFormCost">Cost</label>
           <input
             type="number"
             className="form-control"
-            id="productFormCost"
+            id="gadgetFormCost"
             name="cost"
             onChange={props.handleChange}
             value={props.state.cost}
           />
         </div>
-
-        <div className="form-group col">
-          <label htmlFor="productFormPrice">Price</label>
+  
+  
+        <div className="form-group col mx-2">
+          <label htmlFor="gadgetFormPrice">Price</label>
           <input
             type="number"
             className="form-control"
-            id="productFormPrice"
+            id="gadgetFormPrice"
             name="price"
             onChange={props.handleChange}
             value={props.state.price}
           />
         </div>
-
-        <div className="form-group col">
-          <label htmlFor="productFormVolume">Volume (ml)</label>
+  
+        <div className="form-group col ml-2">
+          <label htmlFor="gadgetFormDiscount">Discount</label>
           <input
             type="number"
             className="form-control"
-            id="productFormVolume"
-            name="volume"
+            id="gadgetFormDiscount"
+            name="discount"
             onChange={props.handleChange}
-            value={props.state.volume}
+            value={props.state.discount}
+          />
+        </div>
+     </div>
+
+      <div className="form-row">
+        
+
+        
+      </div>
+
+      <div className="form-row">
+        <div className="form-group col">
+          <label htmlFor="gadgetFormCondition">Condition</label>
+          <input
+            type="text"
+            className="form-control"
+            id="gadgetFormCondition"
+            name="condition"
+            onChange={props.handleChange}
+            value={props.state.condition}
           />
         </div>
 
         <div className="form-group col">
-          <label htmlFor="productFormQttInStock">Quantity in Stock</label>
+          <label htmlFor="gadgetFormQttInStock">Quantity in Stock</label>
           <input
             type="number"
             className="form-control"
-            id="productFormQttInStock"
+            id="gadgetFormQttInStock"
             name="qtt_in_stock"
             onChange={props.handleChange}
             value={props.state.qtt_in_stock}
@@ -186,6 +135,16 @@ function ProductForm(props) {
         </div>
       </div>
 
+      <div className="form-group">
+        <label htmlFor="gadgetFormImage">Gadget Picture</label>
+        <input
+          type="file"
+          className="form-control"
+          id="gadgetFormImage"
+          name="image_url"
+          onChange={props.handleChange}
+        />
+      </div>
       <hr />
       <button type="submit" className="btn btn-primary">
         Submit
