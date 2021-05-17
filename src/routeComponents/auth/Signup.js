@@ -7,12 +7,9 @@ import api from "../../apis/index";
 import InputFeedback from "../../components/InputFeedback";
 
 const SignupSchema = Yup.object().shape({
-  name: Yup.string()
-    .required("Required field")
-    .max(50, "Name should be 50 characters max"),
+  name: Yup.string().required("Required field").max(50, "Name should be 50 characters max"),
   email: Yup.string().email("Not a valid e-mail").required("Required field"),
-  password: Yup.string()
-    .matches(
+  password: Yup.string().matches(
       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
       "Must have at least 8 characters, uppercase and lowercase letters, numbers and special characters."
     )

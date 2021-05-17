@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="ml-3">
         <NavLink className="navbar-brand" to="/">
-          Ironbeers Store
+          Prime Gadgets
         </NavLink>
       </div>
 
