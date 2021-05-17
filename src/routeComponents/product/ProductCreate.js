@@ -32,10 +32,10 @@ function ProductCreate() {
 
   async function handleFileUpload(file) {
     try {
-      // FormData é uma função construtora global nativa do Javascript que cria um objeto de Formulario no formato multipart/form esperado pelo backend
+      // FormData is a native Javasccript constructor function which creates a Form object in the multipart/form format expected in the backend
       const uploadData = new FormData();
 
-      // 'image' precisa bater com o valor de uploadCloud.single() no nosso backend
+      // 'image' needs to match same value of uploadCloud.single() in the backend
       uploadData.append("image", file);
 
       const response = await api.post("/image-upload", uploadData);
@@ -60,7 +60,7 @@ function ProductCreate() {
         image_url: uploadedImageUrl,
       });
 
-      // Redireciona programaticamente para a URL '/'
+      // Programmatically redirects to URL '/'
       history.push("/");
     } catch (err) {
       console.error(err);
@@ -69,7 +69,7 @@ function ProductCreate() {
 
   return (
     <div>
-      <h1>New Product </h1>
+      <h1>New Gadget </h1>
 
       <hr />
 
