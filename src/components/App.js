@@ -37,11 +37,11 @@ function App() {
               <Route exact path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/password-reset" component={ResetPassword} />
               <ProtectedRoute exact path="/profile" component={Profile} />
-              <AdminRoute
+              {/* <AdminRoute
                 exact
                 path="/create-product"
                 component={ProductCreate}
-              />
+              /> */}
               <Route exact path="/product/:id" component={ProductDetail} />
               <AdminRoute
                 exact
