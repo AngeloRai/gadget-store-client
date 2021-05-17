@@ -36,7 +36,7 @@ function ProductFeed() {
         listTitle="Used Iphones"
         contentList={products.filter((product) => product.category === "mobile" && product.condition === "USED")}
       />
-            <ProductList
+      <ProductList
         listTitle="All Iphones"
         contentList={products}
       />
