@@ -68,6 +68,7 @@ function ProductForm(props) {
         <div className="form-group col mr-2">
           <label htmlFor="gadgetFormCost">Cost</label>
           <input
+            min={0}
             type="number"
             className="form-control"
             id="gadgetFormCost"
@@ -81,6 +82,7 @@ function ProductForm(props) {
         <div className="form-group col mx-2">
           <label htmlFor="gadgetFormPrice">Price</label>
           <input
+            min={0}
             type="number"
             className="form-control"
             id="gadgetFormPrice"
@@ -93,6 +95,7 @@ function ProductForm(props) {
         <div className="form-group col ml-2">
           <label htmlFor="gadgetFormDiscount">Discount</label>
           <input
+            min={0}
             type="number"
             className="form-control"
             id="gadgetFormDiscount"
@@ -104,9 +107,6 @@ function ProductForm(props) {
      </div>
 
       <div className="form-row">
-        
-
-        
       </div>
 
       <div className="form-row">
@@ -125,6 +125,7 @@ function ProductForm(props) {
         <div className="form-group col">
           <label htmlFor="gadgetFormQttInStock">Quantity in Stock</label>
           <input
+            min={0}
             type="number"
             className="form-control"
             id="gadgetFormQttInStock"
