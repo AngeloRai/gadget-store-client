@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-// import api from "../../apis/index";
+import api from "../../apis/index";
 
-// import ProductForm from "./ProductForm";
+import ProductForm from "./ProductForm";
 
 function ProductCreate() {
   const history = useHistory();
@@ -71,7 +71,7 @@ function ProductCreate() {
     <div>
       <h1>New Product </h1>
 
-//       <hr />
+      <hr />
 
       <ProductForm
         state={state}
