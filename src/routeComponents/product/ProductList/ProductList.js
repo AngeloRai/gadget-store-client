@@ -33,6 +33,7 @@ function ProductsList(props) {
           <h4>{props.listTitle}</h4>
         </div>
         <Carousel
+          renderButtonGroupOutside={true}
           swipeable={true}
           draggable={false}
           showDots={true}
@@ -40,7 +41,7 @@ function ProductsList(props) {
           ssr={true} // means to render carousel on server-side.
           infinite={true}
           autoPlay={props.deviceType !== "mobile" ? true : false}
-          autoPlaySpeed={3000}
+          autoPlaySpeed={10000}
           keyBoardControl={true}
           customTransition="all .5"
           transitionDuration={500}
@@ -51,7 +52,7 @@ function ProductsList(props) {
           itemClass="carousel-item-padding-40-px"
         >
           {props.contentList.map((product) => {
-          return (<div><ProductCard key={product._id} product={product}/></div>)})}
+          return (<div style={{padding: "10px"}}><ProductCard key={product._id} product={product}/></div>)})}
         </Carousel>
       </div>
     );

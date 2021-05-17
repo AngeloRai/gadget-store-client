@@ -37,23 +37,11 @@ function ProductFeed() {
         contentList={products.filter((product) => product.category === "mobile" && product.condition === "USED")}
       />
       <ProductList
-        listTitle="All Iphones"
+        listTitle="All Products"
         contentList={products}
       />
     </div>
   );
-
-  // return (
-  //   <div className="row">
-  //     {products.map((product) => {
-  //       return (
-  //         <div key={product._id} className="col-12 col-sm-4 col-md-3">
-  //           <ProductCard product={product} />
-  //         </div>
-  //       );
-  //     })}
-  //   </div>
-  // );
 }
 
 export default ProductFeed;
