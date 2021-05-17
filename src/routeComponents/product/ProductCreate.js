@@ -24,7 +24,8 @@ function ProductCreate() {
 
   function handleChange(event) {
     if (event.target.files) {
-      setState({ ...state, [event.target.name]: event.target.files[0] });
+      console.log(event.target.files)
+      setState({ ...state, [event.target.name]: event.target.files });
     } else {
       setState({ ...state, [event.target.name]: event.target.value });
     }
@@ -37,6 +38,9 @@ function ProductCreate() {
 
       // 'image' precisa bater com o valor de uploadCloud.single() no nosso backend
       uploadData.append("image", file);
+      for (let key of uploadData.entries()) {
+        console.log(key[1]);
+      }
 
       const response = await api.post("/image-upload", uploadData);
 
@@ -51,13 +55,17 @@ function ProductCreate() {
       event.preventDefault();
 
       let uploadedImageUrl = "";
+      let auxArr = []
       if (state.image_url) {
-        uploadedImageUrl = await handleFileUpload(state.image_url);
+        for (let file of Object.values(state.image_url)) {
+          uploadedImageUrl = await handleFileUpload(file);
+          auxArr.push(uploadedImageUrl)
+        }
       }
 
       const response = await api.post("/product", {
         ...state,
-        image_url: uploadedImageUrl,
+        image_url: auxArr,
       });
 
       // Redireciona programaticamente para a URL '/'
