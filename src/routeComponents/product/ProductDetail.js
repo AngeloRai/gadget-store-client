@@ -103,6 +103,8 @@ function ProductDetails() {
         <div className="form-group d-inline-block mr-3">
           <label htmlFor="productDetailQuantity">Quantity: </label>
           <input
+            max={state.qtt_in_stock}
+            min={0}
             type="number"
             id="productDetailQuantity"
             className="form-control"
