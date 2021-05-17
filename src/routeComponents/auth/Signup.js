@@ -17,10 +17,7 @@ const SignupSchema = Yup.object().shape({
       "Must have at least 8 characters, uppercase and lowercase letters, numbers and special characters."
     )
     .required("Required field"),
-  phoneNumber: Yup.string().matches(
-    /(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})/,
-    "Invalid phone number"
-  ),
+  phoneNumber: Yup.string(),
   street: Yup.string().required("Required field"),
   neighbourhood: Yup.string().required("Required Field"),
   city: Yup.string().required("Required Field"),

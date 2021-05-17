@@ -4,10 +4,14 @@ const apis = {
   development: "http://localhost:4000",
   production: "https://ironbeers-store.herokuapp.com",
 };
-
 const api = axios.create({
   baseURL: apis[process.env.NODE_ENV],
-});
+})
+// uncomment this after deploying and delete 3 following lines
+
+// const api = axios.create({
+//   baseURL: "http://localhost:4000",
+// });
 
 // Interceptors são funções que interceptam uma requisição ou uma resposta antes do método ser executado, e transforma essa requisição ou resposta de alguma maneira. No nosso caso, vamos injetar os cabeçalhos de Authorization antes de cada requisição
 api.interceptors.request.use((config) => {

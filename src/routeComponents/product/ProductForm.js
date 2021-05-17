@@ -1,26 +1,53 @@
+// {
+//   name: "",
+//   category: "",
+//   model: "",
+//   brand: "",
+//   description: "",
+//   discount: "",
+//   image_url: "",
+//   cost: 0,
+//   price: 0,
+//   qtt_in_stock: 0,
+//   color: '',
+//   condition: ''
+// }
+
+
 function ProductForm(props) {
   return (
     <form className="mb-5" onSubmit={props.handleSubmit}>
       <div className="form-group">
-        <label htmlFor="productFormName">Beer Name</label>
+        <label htmlFor="productFormCategory">Category</label>
         <input
           type="text"
           className="form-control"
-          id="productFormName"
-          name="name"
+          id="productFormCategory"
+          name="category"
           onChange={props.handleChange}
-          value={props.state.name}
+          value={props.state.category}
         />
       </div>
       <div className="form-group">
-        <label htmlFor="productFormTagline">Tagline</label>
+        <label htmlFor="productFormBrand">Brand</label>
         <input
           type="text"
           className="form-control"
-          id="productFormTagline"
-          name="tagline"
+          id="productFormBrand"
+          name="brand"
           onChange={props.handleChange}
-          value={props.state.tagline}
+          value={props.state.brand}
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="productFormModel">Model</label>
+        <input
+          type="text"
+          className="form-control"
+          id="productFormModel"
+          name="model"
+          onChange={props.handleChange}
+          value={props.state.model}
         />
       </div>
 

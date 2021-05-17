@@ -10,18 +10,17 @@ function ProductCreate() {
 
   const [state, setState] = useState({
     name: "",
-    tagline: "",
-    first_brewed: "",
+    category: "",
+    model: "",
+    brand: "",
     description: "",
+    discount: "",
     image_url: "",
-    abv: 0,
-    food_pairing: [],
-    contributed_by: "",
     cost: 0,
     price: 0,
     qtt_in_stock: 0,
-    volume: 0,
-    expire_date: "",
+    color: '',
+    condition: ''
   });
 
   function handleChange(event) {
@@ -57,7 +56,7 @@ function ProductCreate() {
         uploadedImageUrl = await handleFileUpload(state.image_url);
       }
 
-      const response = await api.post("/product", {
+      await api.post("/product", {
         ...state,
         image_url: uploadedImageUrl,
       });

@@ -7,18 +7,17 @@ import ProductForm from "./ProductForm";
 function ProductEdit() {
   const [state, setState] = useState({
     name: "",
-    tagline: "",
-    first_brewed: "",
+    category: "",
+    model: "",
+    brand: "",
     description: "",
+    discount: "",
     image_url: "",
-    abv: 0,
-    food_pairing: [],
-    contributed_by: "",
     cost: 0,
     price: 0,
     qtt_in_stock: 0,
-    volume: 0,
-    expire_date: "",
+    color: '',
+    condition: ''
   });
 
   const { id } = useParams();
@@ -74,7 +73,7 @@ function ProductEdit() {
         uploadedImageUrl = await handleFileUpload(state.image_url);
       }
 
-      const response = await api.put(`/product/${id}`, {
+      await api.put(`/product/${id}`, {
         ...state,
         image_url: uploadedImageUrl,
       });
