@@ -1,6 +1,6 @@
 import React from "react";
 
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../../../components/ProductCard/ProductCard";
 
 // As a functional component it receives through props the list of the content to be rendered
 function ProductSingleCategory(props) {

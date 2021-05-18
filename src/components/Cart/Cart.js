@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "./Cart.css";
 import {GiShoppingCart} from "react-icons/gi"
-import { RiShoppingCartLine } from "react-icons/ri";
 
 import { CartContext } from "../../contexts/cartContext";
 
