@@ -8,12 +8,48 @@ import {
 function Footer() {
   
   return (
-    <div className="fixed-bottom">
+    <div className="">
       <footer
-        className="navbar navbar-light bg-light d-flex justify-content-between"
+        className="navbar navbar-light bg-light d-flex justify-content-around"
         style={{ opacity: ".8" }}
       >
-        <div className="container-fluid d-flex justify-content-between">
+        <div className="container-fluid flex-column ">
+          <div className='d-flex'>
+            <h6 className="m-0 text-dark"> ANGELO RAIMONDI: </h6>
+            <a
+              href="https://www.instagram.com/raimondiangelo/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              &nbsp;
+              <FaInstagram className="h6 mx-1 text-dark" />
+              &nbsp;
+            </a>
+            <a
+              href="https://www.facebook.com/ang.raimondi"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebookSquare className="h6 mx-1 " />
+              &nbsp;
+            </a>
+            <a
+              href="https://github.com/AngeloRai"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub className="h6 mx-1 text-dark" />
+              &nbsp;
+            </a>
+            <a
+              href="https://www.linkedin.com/in/angelo-raimondi-b521031/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin className="h6 mx-1" />
+              &nbsp;
+            </a>
+          </div>
           <div className='d-flex'>
             <h6 className="m-0 text-dark"> ANGELO RAIMONDI: </h6>
             <a
