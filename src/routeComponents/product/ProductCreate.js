@@ -5,13 +5,16 @@ import api from "../../apis/index";
 
 import ProductForm from "./ProductForm";
 
+
+
+
 function ProductCreate() {
   const history = useHistory();
 
   const [state, setState] = useState({
     category: "",
     model: "",
-    brand: "",
+    brand: "Apple",
     cost: 0,
     price: 0,
     discount: "",

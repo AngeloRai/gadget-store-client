@@ -9,6 +9,7 @@ import AdminRoute from "../routeComponents/auth/AdminRoute";
 import ForgotPassword from "../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../routeComponents/auth/ResetPassword";
 import Navbar from "./Navbar";
+import AllProducts from '../routeComponents/product/AllProducts/AllProducts'
 
 import Home from "../routeComponents/product/Home/Home";
 import ProductDetail from "../routeComponents/product/ProductDetail";
@@ -32,6 +33,7 @@ function App() {
           <div className="container mt-5">
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/all-products" component={AllProducts} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/forgot-password" component={ForgotPassword} />

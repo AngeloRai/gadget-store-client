@@ -52,7 +52,7 @@ function Navbar() {
           ) : null}
 
           <li className="nav-item">
-            <NavLink className="nav-link" activeClassName="active" to="/all">
+            <NavLink className="nav-link" activeClassName="active" to="/all-products">
               All Products
             </NavLink>
           </li>

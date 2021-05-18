@@ -9,7 +9,7 @@ function ProductEdit() {
     name: "",
     category: "",
     model: "",
-    brand: "",
+    brand: "Apple",
     description: "",
     discount: "",
     image_url: "",
