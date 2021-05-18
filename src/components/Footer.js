@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className="">
       <footer
-        className="navbar navbar-light bg-light d-flex justify-content-around"
+        className="navbar navbar-light navbar-static-bottom bg-light d-flex justify-content-around"
         style={{ opacity: ".8" }}
       >
         <div className="container-fluid flex-column ">

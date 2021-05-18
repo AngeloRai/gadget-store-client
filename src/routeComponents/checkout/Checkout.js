@@ -8,7 +8,7 @@ import { AuthContext } from "../../contexts/authContext";
 import api from "../../apis/index.js";
 
 const stripePromise = loadStripe(
-  "pk_test_51IpY5SBtp8twNsKT2ZuHjMRH7Ne40Nkynv7VNRnQINOnkj3N0id7sLRczvclo3krC056AfwOAOLPXuqti5vJL3JI00G0GBEzB7"
+  "pk_test_51IsYVoATzq9KAk7iZUS2hY4j12KsV7GK5nLPdtgDuLS4feXBHu0fNFlOsW2BHxMndlRPMhbcUC8YUEk94hP4npqs00D7WvYZji"
 );
 
 function Checkout() {

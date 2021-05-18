@@ -12,10 +12,10 @@ function ProductForm(props) {
             onChange={props.handleChange}
             value={props.state.category}
           >
-            <option value="iPhone">iPhone</option>
-            <option value="iPad">iPad</option>
-            <option value="Watch">Watch</option>
-            <option value="Accessories">Accessories</option>
+            <option value="iPhone">mobile</option>
+            <option value="iPad">tablet</option>
+            <option value="Watch">watch</option>
+            <option value="Accessories">accessories</option>
           </select>
         </div>
         <div className="form-group col mx-2">
