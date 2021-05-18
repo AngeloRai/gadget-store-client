@@ -1,27 +1,29 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css"
 
-import Signup from "../routeComponents/auth/Signup";
-import Login from "../routeComponents/auth/Login";
-import Profile from "../routeComponents/auth/Profile";
-import ProtectedRoute from "../routeComponents/auth/ProtectedRoute";
-import AdminRoute from "../routeComponents/auth/AdminRoute";
-import ForgotPassword from "../routeComponents/auth/ForgotPassword";
-import ResetPassword from "../routeComponents/auth/ResetPassword";
-import Navbar from "./Navbar";
-import AllProducts from '../routeComponents/product/AllProducts/AllProducts'
+import Signup from "../../routeComponents/auth/Signup";
+import Login from "../../routeComponents/auth/Login";
+import Profile from "../../routeComponents/auth/Profile";
+import ProtectedRoute from "../../routeComponents/auth/ProtectedRoute";
+import AdminRoute from "../../routeComponents/auth/AdminRoute";
+import ForgotPassword from "../../routeComponents/auth/ForgotPassword";
+import ResetPassword from "../../routeComponents/auth/ResetPassword";
+import Navbar from "../Navbar";
+import HeroCarousel from '../HeroCarousel/HeroCarousel'
+import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
 
-import Home from "../routeComponents/product/Home/Home";
-import ProductDetail from "../routeComponents/product/ProductDetail";
-import ProductCreate from "../routeComponents/product/ProductCreate";
-import ProductEdit from "../routeComponents/product/ProductEdit";
-import ProductDelete from "../routeComponents/product/ProductDelete";
+import Home from "../../routeComponents/product/Home/Home";
+import ProductDetail from "../../routeComponents/product/ProductDetail";
+import ProductCreate from "../../routeComponents/product/ProductCreate";
+import ProductEdit from "../../routeComponents/product/ProductEdit";
+import ProductDelete from "../../routeComponents/product/ProductDelete";
 
-import Checkout from "../routeComponents/checkout/Checkout";
-import OrderSuccess from "../routeComponents/checkout/OrderSuccess";
+import Checkout from "../../routeComponents/checkout/Checkout";
+import OrderSuccess from "../../routeComponents/checkout/OrderSuccess";
 
-import { AuthContextComponent } from "../contexts/authContext";
-import { CartContextComponent } from "../contexts/cartContext";
+import { AuthContextComponent } from "../../contexts/authContext";
+import { CartContextComponent } from "../../contexts/cartContext";
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
           <Navbar />
 
           <div className="container mt-5">
+          <Route exact path="/" component={HeroCarousel}/>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/all-products" component={AllProducts} />

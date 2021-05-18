@@ -38,8 +38,8 @@ function ProductCard(props) {
           <div className='original-price-fixed-height'>
             {props.product.discount ? <span className="card-text" style={{fontSize: '10px', textDecoration: "line-through", color: "darkgray"}}>
               {Number(props.product.price).toLocaleString(
-                { style: "currency", currency: "BRL" },
-                window.navigator.languages[0]
+                window.navigator.languages[0],
+                { style: "currency", currency: "BRL" }
               )}
             </span> : null}
           </div>
