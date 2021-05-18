@@ -52,7 +52,7 @@ function ProductsList(props) {
           itemClass="carousel-item-padding-40-px"
         >
           {props.contentList.map((product) => {
-          return (<div style={{padding: "10px"}}><ProductCard key={product._id} product={product}/></div>)})}
+          return (<div key={product._id} style={{padding: "10px"}}><ProductCard product={product}/></div>)})}
         </Carousel>
       </div>
     );

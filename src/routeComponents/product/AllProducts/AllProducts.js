@@ -7,7 +7,7 @@ import "./AllProducts.css";
 function ProductFeed() {
   const [products, setProduct] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [searchWord, setSearchWord] = useState();
+  const [searchWord, setSearchWord] = useState('');
 
   useEffect(() => {
     async function fetchProducts() {
@@ -26,14 +26,14 @@ function ProductFeed() {
 
   useEffect(() => {
     async function fetchProducts() {
-      console.log(products);
+      
       try {
         if(products && searchWord){
           const filteredArray = products.filter((gadget) =>
           gadget.model.toLowerCase().includes(searchWord.toLowerCase())
         );
         setFilteredProducts([...filteredArray])}
-        console.log(filteredProducts);
+        
       } catch (err) {
         console.error(err);
       }
@@ -47,11 +47,11 @@ function ProductFeed() {
 
   return (
     <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-      <div className="form-group col mx-2">
+      <div className="form-group mb-4">
           <label htmlFor="searchWord">Search</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shadow-none no-border"
             id="searchWord"
             name="searchWord"
             onChange={handleChange}
