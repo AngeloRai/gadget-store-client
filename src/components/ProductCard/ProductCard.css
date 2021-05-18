@@ -5,14 +5,14 @@
 }
 
 .badgets-fixed-height {
-  height: 20px;
-  max-height: 20px;
+  height: 15px;
+  max-height: 15px;
 }
 
 .card-fixed-height {
   height: 300px;
   max-height: 300px;
-  max-width: 150px;
+  max-width: 200px;
 }
 
 .card-img-container {
@@ -21,8 +21,11 @@
 }
 
 .card-title-fixed-height {
-  height: 20px;
-  max-height: 20px;
+  height: 40px;
+  max-height: 40px;
+  margin: 0;
+  display: flex block;
+  align-items: center;
 }
 
 .original-price-fixed-height {

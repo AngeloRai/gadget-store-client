@@ -1,10 +1,10 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
 
-import api from "../../apis/index";
-import { AuthContext } from "../../contexts/authContext";
-import { CartContext } from "../../contexts/cartContext";
-import ConfirmationModal from "../../components/ConfirmationModal";
+import api from "../../../apis/index";
+import { AuthContext } from "../../../contexts/authContext";
+import { CartContext } from "../../../contexts/cartContext";
+import ConfirmationModal from "../../../components/ConfirmationModal";
 
 function ProductDetails() {
   const [state, setState] = useState({
@@ -45,18 +45,20 @@ function ProductDetails() {
 
   return (
     <div>
-      {loggedInUser.user.role === "ADMIN" ? (
-        <div className="row d-flex justify-content-end">
-          <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
-            Edit
-          </Link>
-          {/* A confirmation Modal pops up before deleting the product */}
-          <button className="btn btn-danger" onClick={() => setShowModal(true)}>
-            Delete
-          </button>
-        </div>
-      ) : null}
-
+      <div className='block'>
+        {loggedInUser.user.role === "ADMIN" ? (
+          <div className="row d-flex justify-content-end">
+            <Link to={`/product/edit/${id}`} className="btn btn-warning mr-3">
+              Edit
+            </Link>
+            {/* A confirmation Modal pops up before deleting the product */}
+            <button className="btn btn-danger" onClick={() => setShowModal(true)}>
+              Delete
+            </button>
+          </div>
+        ) : null}
+      </div>
+      
       <img
         className="card-img product-img mx-auto mt-2"
         src={state.image_url}

@@ -4,12 +4,12 @@ import "./ProductCard.css";
 function ProductCard(props) {
   return (
     <Link
-      className="text-decoration-none "
+      className="text-decoration-none"
       key={props.product._id}
       to={`/product/${props.product._id}`}
     >
       <div
-        className="card card-fixed-height text-dark rounded border-0 m-2"
+        className="card card-fixed-height text-dark rounded border-0 m-2 mx-auto"
         style={{ width: "100%" }}
       >
         <div className="card-img-container d-flex justify-content-center align-items-center">
@@ -22,15 +22,15 @@ function ProductCard(props) {
 
         <div className="card-body" style={{ padding: '10px' }}>
 
-          <div className='d-flex badgets-fixed-height mb-3'>
-            {props.product.condition==="NEW" ? <h6><span className="badge bg-success text-white mr-3">NEW</span></h6> : <h6><span className="badge bg-primary text-white mr-3">USED</span></h6>}
-            {props.product.discount ? <h6><span className="badge bg-danger text-white">{props.product.discount}%</span></h6> : null
+          <div className='d-flex justify-content-center badgets-fixed-height mb-3'>
+            {props.product.condition==="NEW" ? <span className="badge bg-success text-white mx-1" style={{fontSize: "10px"}}>NEW</span> : <span className="badge bg-primary text-white mx-1" style={{fontSize: "10px"}}>USED</span>}
+            {props.product.discount ? <span className="badge bg-danger text-white justify-content-evenly mx-1" style={{fontSize: "10px"}}>{props.product.discount}%</span> : null
             }
           </div>
 
           <h5
             title={props.product.model}
-            className="card-title card-title-fixed-height text-truncate"
+            className="card-title card-title-fixed-height text-center"
           >
             <small>{props.product.model}</small>
           </h5>

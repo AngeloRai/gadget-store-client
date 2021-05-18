@@ -15,7 +15,7 @@ import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
 import Footer from '../Footer'
 
 import Home from "../../routeComponents/product/Home/Home";
-import ProductDetail from "../../routeComponents/product/ProductDetail";
+import ProductDetail from "../../routeComponents/product/ProductDetail/ProductDetail";
 import ProductCreate from "../../routeComponents/product/ProductCreate";
 import ProductEdit from "../../routeComponents/product/ProductEdit";
 import ProductDelete from "../../routeComponents/product/ProductDelete";
