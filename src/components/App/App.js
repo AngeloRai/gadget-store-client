@@ -32,7 +32,7 @@ function App() {
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
-          <div className="container mt-5" style={{height: "calc(100% - 70px)"}}>
+          <div className="container mt-5">
           <Route exact path="/" component={HeroCarousel}/>
             <Switch>
               <Route exact path="/" component={Home} />
@@ -62,7 +62,7 @@ function App() {
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </CartContextComponent>
       </AuthContextComponent>
     </BrowserRouter>

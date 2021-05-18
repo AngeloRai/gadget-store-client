@@ -4,11 +4,12 @@ import {
   FaGithub,
   FaLinkedin,
 } from "react-icons/fa";
+import './Footer.css'
 
 function Footer() {
   
   return (
-    <div className="">
+    <div className="footer">
       <footer
         className="navbar navbar-light bg-light d-flex justify-content-around"
         style={{ opacity: ".8" }}
