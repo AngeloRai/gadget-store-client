@@ -3,7 +3,8 @@ import { Dropdown } from "react-bootstrap";
 import { useContext } from "react";
 
 import { AuthContext } from "../contexts/authContext";
-
+import logo from '../../src/GDT-logo1.png'
+import './Navbar.css'
 import Cart from "./Cart";
 
 function Navbar() {
@@ -11,6 +12,11 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: "#0a0a0a"}}>
+      <div className="ml-3">
+        <NavLink className="navbar-brand" to="/">
+          <img className="logo" src={logo} alt="logo" />
+        </NavLink>
+      </div>
       <div className="ml-3">
         <NavLink className="navbar-brand" to="/">
           Prime Gadgets
