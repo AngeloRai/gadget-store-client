@@ -46,7 +46,7 @@ function ProductFeed() {
   }
 
   return (
-    <div className="container-fluid" style={{ paddingBottom: "100px" }}>
+    <div className="container-fluid" style={{ paddingBottom: "100px"}}>
       <div className="form-group mb-4">
           <label htmlFor="searchWord">Search</label>
           <input
