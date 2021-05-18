@@ -23,8 +23,8 @@ function ProductCard(props) {
         <div className="card-body" style={{ padding: '10px' }}>
 
           <div className='d-flex badgets-fixed-height mb-3'>
-            {props.product.condition==="NEW" ? <h6><span className="badge bg-success text-white mr-3">NEW</span></h6> : <h6><span class="badge bg-primary text-white mr-3">USED</span></h6>}
-            {props.product.discount ? <h6><span class="badge bg-danger text-white">{props.product.discount}%</span></h6> : null
+            {props.product.condition==="NEW" ? <h6><span className="badge bg-success text-white mr-3">NEW</span></h6> : <h6><span className="badge bg-primary text-white mr-3">USED</span></h6>}
+            {props.product.discount ? <h6><span className="badge bg-danger text-white">{props.product.discount}%</span></h6> : null
             }
           </div>
 
