@@ -9,9 +9,10 @@ import ProtectedRoute from "../../routeComponents/auth/ProtectedRoute";
 import AdminRoute from "../../routeComponents/auth/AdminRoute";
 import ForgotPassword from "../../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../../routeComponents/auth/ResetPassword";
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
 import HeroCarousel from '../HeroCarousel/HeroCarousel'
 import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
+import Footer from '../Footer'
 
 import Home from "../../routeComponents/product/Home/Home";
 import ProductDetail from "../../routeComponents/product/ProductDetail";
@@ -31,6 +32,7 @@ function App() {
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
+          
 
           <div className="container mt-5">
           <Route exact path="/" component={HeroCarousel}/>
@@ -62,6 +64,7 @@ function App() {
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>
           </div>
+          <Footer />
         </CartContextComponent>
       </AuthContextComponent>
     </BrowserRouter>
