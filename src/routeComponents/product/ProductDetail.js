@@ -21,7 +21,7 @@ function ProductDetails() {
     image_url: "",
   });
   const [showModal, setShowModal] = useState(false);
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   // Equivalente a usar o props.match.params.id
   const { id } = useParams();

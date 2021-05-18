@@ -9,7 +9,7 @@ import ProtectedRoute from "../../routeComponents/auth/ProtectedRoute";
 import AdminRoute from "../../routeComponents/auth/AdminRoute";
 import ForgotPassword from "../../routeComponents/auth/ForgotPassword";
 import ResetPassword from "../../routeComponents/auth/ResetPassword";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../NavbarComponent/NavbarComponent";
 import HeroCarousel from '../HeroCarousel/HeroCarousel'
 import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
 import Footer from '../Footer'
@@ -32,9 +32,7 @@ function App() {
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
-          
-
-          <div className="container mt-5">
+          <div className="container mt-5" style={{height: "calc(100% - 70px)"}}>
           <Route exact path="/" component={HeroCarousel}/>
             <Switch>
               <Route exact path="/" component={Home} />
