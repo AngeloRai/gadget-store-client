@@ -66,6 +66,9 @@ function ProductDetails() {
         <h4 className="card-title">
           <small>{state.model}</small>
         </h4>
+        <p className="card-title">
+          <small>{state.color}</small>
+        </p>
 
         <div className='original-price-fixed-height'>
             {state.discount ? <span className="card-text" style={{fontSize: '13px', textDecoration: "line-through", color: "darkgray"}}>
@@ -103,6 +106,8 @@ function ProductDetails() {
         <div className="form-group d-inline-block mr-3">
           <label htmlFor="productDetailQuantity">Quantity: </label>
           <input
+            max={state.qtt_in_stock}
+            min={1}
             type="number"
             id="productDetailQuantity"
             className="form-control"

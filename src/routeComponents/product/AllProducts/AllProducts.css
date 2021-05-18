@@ -1,0 +1,8 @@
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.movie-app > .row::-webkit-scrollbar {
+  display: none;
+}
