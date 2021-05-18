@@ -12,6 +12,7 @@ import ResetPassword from "../../routeComponents/auth/ResetPassword";
 import Navbar from "../NavbarComponent/NavbarComponent";
 import HeroCarousel from '../HeroCarousel/HeroCarousel'
 import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
+import Iphone from '../../routeComponents/product/Iphone/Iphone'
 import Footer from '../Footer'
 
 import Home from "../../routeComponents/product/Home/Home";
@@ -25,18 +26,19 @@ import OrderSuccess from "../../routeComponents/checkout/OrderSuccess";
 
 import { AuthContextComponent } from "../../contexts/authContext";
 import { CartContextComponent } from "../../contexts/cartContext";
-
+//style={{height: "calc(100% - 70px)"}}
 function App() {
   return (
     <BrowserRouter>
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
-          <div className="container mt-5" style={{height: "calc(100% - 70px)"}}>
+          <div className="container mt-5" >
           <Route exact path="/" component={HeroCarousel}/>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/all-products" component={AllProducts} />
+              <Route exact path="/iphone" component={Iphone} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/forgot-password" component={ForgotPassword} />

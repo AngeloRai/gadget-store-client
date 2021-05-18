@@ -27,32 +27,16 @@ function NavbarComponent() {
           <NavLink className="nav-link" activeClassName="active" to="/">
             HOME
           </NavLink>
-          <NavLink
-            className="nav-link"
-            activeClassName="active"
-            to="/all-products"
-          >
+          <NavLink className="nav-link" activeClassName="active" to="/iphone">
             IPHONE
           </NavLink>
-          <NavLink
-            className="nav-link"
-            activeClassName="active"
-            to="/all-products"
-          >
+          <NavLink className="nav-link" activeClassName="active" to="/iphone">
             IPAD
           </NavLink>
-          <NavLink
-            className="nav-link"
-            activeClassName="active"
-            to="/all-products"
-          >
+          <NavLink className="nav-link" activeClassName="active" to="/iphone">
             APPLE WATCH
           </NavLink>
-          <NavLink
-            className="nav-link"
-            activeClassName="active"
-            to="/all-products"
-          >
+          <NavLink className="nav-link" activeClassName="active" to="/iphone">
             ACCESSORIES
           </NavLink>
           <NavLink
