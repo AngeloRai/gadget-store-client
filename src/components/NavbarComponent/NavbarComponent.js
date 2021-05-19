@@ -61,7 +61,6 @@ function NavbarComponent() {
         <Nav>
           {loggedInUser.user.name ? (
             <div className="d-flex align-items-center">
-              <Cart />
               <Dropdown>
                 <Dropdown.Toggle
                   id="dropdown-basic"
@@ -89,6 +88,7 @@ function NavbarComponent() {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
+              <Cart />
             </div>
           ) : (
             <NavLink
@@ -96,7 +96,7 @@ function NavbarComponent() {
               activeClassName="active"
               to="/login"
             >
-              Login
+              LOGIN
             </NavLink>
           )}
         </Nav>
