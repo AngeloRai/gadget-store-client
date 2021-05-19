@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
 import api from "../../apis/index";
@@ -6,7 +6,6 @@ import ProductForm from "./ProductForm";
 
 function ProductEdit() {
   const [state, setState] = useState({
-    name: "",
     category: "",
     model: "",
     brand: "Apple",
@@ -31,7 +30,6 @@ function ProductEdit() {
 
         console.log(response.data);
         setState({ ...response.data });
-        
       } catch (err) {
         console.error(err);
       }
@@ -42,13 +40,11 @@ function ProductEdit() {
   function handleChange(event) {
     if (event.target.files) {
       setState({ ...state, [event.target.name]: event.target.files[0] });
-      console.log(state)
     } else {
       setState({ ...state, [event.target.name]: event.target.value });
-      
     }
   }
-  console.log(state);
+
   async function handleFileUpload(file) {
     try {
       // FormData é uma função construtora global nativa do Javascript que cria um objeto de Formulario no formato multipart/form esperado pelo backend

@@ -1,9 +1,9 @@
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../contexts/cartContext";
-import { AuthContext } from "../../contexts/authContext";
+import { CartContext } from "../../../contexts/cartContext";
+import { AuthContext } from "../../../contexts/authContext";
 
-import api from "../../apis/index";
+import api from "../../../apis/index";
 
 function OrderSuccess() {
   const { cart, setCart } = useContext(CartContext);
