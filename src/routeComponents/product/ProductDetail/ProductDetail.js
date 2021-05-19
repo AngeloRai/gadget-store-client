@@ -112,8 +112,19 @@ function ProductDetails() {
           <h4 className="card-title">
             <small>{state.model}</small>
           </h4>
+
+          <div className='d-flex badgets-fixed-height mb-3'>
+            {state.condition==="NEW" ? <span className="badge bg-success text-white mx-1" style={{fontSize: "10px"}}>NEW</span> : <span className="badge bg-primary text-white mx-1" style={{fontSize: "10px"}}>USED</span>}
+            {state.discount ? <span className="badge bg-danger text-white justify-content-evenly mx-1" style={{fontSize: "10px"}}>{state.discount}%</span> : null
+            }
+          </div>
+
+          <p className="card-text mb-0">
+            <small><strong>Description:</strong> {state.description}</small>
+          </p>
+
           <p className="card-title">
-            <small>{state.color}</small>
+            <small><strong>Color:</strong> {state.color}</small>
           </p>
 
           <div className='original-price-fixed-height'>
@@ -140,17 +151,11 @@ function ProductDetails() {
             </h4>}
 
           <p>
-            <small>In stock: {state.qtt_in_stock} units</small>
+            <small><strong>In stock:</strong> {state.qtt_in_stock} units</small>
           </p>
-
-
-          <p className="card-text mb-0">
-            <small>{state.description}</small>
-          </p>
-
 
           <div className="form-group d-inline-block mr-3">
-            <label htmlFor="productDetailQuantity">Quantity: </label>
+            <label htmlFor="productDetailQuantity"><small><strong>Quantity:</strong></small> </label>
             <input
               max={state.qtt_in_stock}
               min={1}
@@ -161,15 +166,15 @@ function ProductDetails() {
               onChange={(event) => setQuantity(Number(event.target.value))}
             />
           </div>
-          <button
+          <Link
             className="btn btn-primary"
             onClick={() => {
-              console.log(cart);
               setCart([...cart, { qtt: quantity, productId: id }]);
+              history.push('/checkout')
             }}
           >
-            Add to Cart
-          </button>
+            <small>Add to Cart</small>
+          </Link>
         </div>
       </div>
       <ConfirmationModal
