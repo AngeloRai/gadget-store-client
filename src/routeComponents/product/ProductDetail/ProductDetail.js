@@ -103,7 +103,7 @@ function ProductDetails() {
             itemClass="carousel-item-padding-40-px"
           >
             {state.image_url.map((url) => {
-              return (<div key={url} className='d-flex justify-content-center' style={{ padding: "10px" }}><img src={url} className='mx-auto pb-3' /></div>)
+              return (<div key={url} className='d-flex justify-content-center' style={{ padding: "10px" }}><img src={url} className='mx-auto pb-3' style={{height: '350px'}} /></div>)
             })}
           </Carousel>
         </div>

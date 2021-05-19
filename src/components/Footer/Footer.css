@@ -6,3 +6,11 @@ footer {
   
   bottom: 0;
 }
+
+@media (max-width: 750px)
+{
+  .contacts
+   {
+    display: none;
+   }
+}

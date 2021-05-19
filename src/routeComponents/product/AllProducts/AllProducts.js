@@ -47,11 +47,11 @@ function ProductFeed() {
 
   return (
     <div className="container-fluid" style={{ paddingBottom: "100px"}}>
-      <div className="form-group mb-4">
-          <label htmlFor="searchWord">Search</label>
+      <div className="form-group mb-4 ">
+          <label htmlFor="searchWord"><h6 className="text-secondary" >SEARCH</h6></label>
           <input
             type="text"
-            className="form-control shadow-none no-border"
+            className="w-25 form-control shadow-none no-border"
             id="searchWord"
             name="searchWord"
             onChange={handleChange}
@@ -59,7 +59,7 @@ function ProductFeed() {
           />
         </div>
         
-        {searchWord && <div className="container-fluid movie-app">
+        {searchWord && <div className="container-fluid">
         {/* New iphones List */}
         <ProductList
           listTitle="SEARCH RESULTS"
@@ -68,7 +68,7 @@ function ProductFeed() {
       </div>}
 
       {/* Contains all the lists shown in the home-screen */}
-      <div className="container-fluid movie-app">
+      <div className="container-fluid">
         {/* New iphones List */}
         <ProductList
           listTitle="NEW IPHONES"
