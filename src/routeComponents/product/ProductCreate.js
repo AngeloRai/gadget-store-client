@@ -33,6 +33,7 @@ function ProductCreate() {
       setState({ ...state, [event.target.name]: event.target.value });
     }
   }
+  console.log(state)
 
   async function handleFileUpload(file) {
     try {

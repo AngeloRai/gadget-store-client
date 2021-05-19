@@ -38,7 +38,7 @@ function ProductCard(props) {
           <div className='original-price-fixed-height text-center'>
             {props.product.discount ? <span className="card-text" style={{fontSize: '10px', textDecoration: "line-through", color: "darkgray"}}>
               {Number(props.product.price).toLocaleString(
-                window.navigator.languages[0],
+                "pt-BR",
                 { style: "currency", currency: "BRL" }
               )}
             </span> : null}
@@ -47,9 +47,17 @@ function ProductCard(props) {
           
           <h5 className="card-text text-center">
             {Number((props.product.price * (100-props.product.discount))/100).toLocaleString(
-              window.navigator.languages[0],
+              "pt-BR",
               { style: "currency", currency: "BRL" }
             )}
+
+          </h5> : 
+          <h5 className="card-text">
+          {Number(props.product.price ).toLocaleString(
+          "pt-BR",
+            { style: "currency", currency: "BRL" }
+          )}
+        </h5>}
           </h5>
         </div>
       </div>

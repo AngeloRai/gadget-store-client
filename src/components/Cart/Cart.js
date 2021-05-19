@@ -11,7 +11,7 @@ function Cart() {
   return (
     <NavLink to="/checkout" title="Shopping cart">
       <div className="cart-link text-white d-flex align-items-center mt-2">
-      <GiShoppingCart className="h1 mx-1 text-white" />
+      <GiShoppingCart className="h2 mx-1 text-white" />
              {cart.length > 0 ? (
           <span className="badge badge-danger position-absolute ml-4 mb-5">
             {cart.length}
