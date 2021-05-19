@@ -166,15 +166,15 @@ function ProductDetails() {
               onChange={(event) => setQuantity(Number(event.target.value))}
             />
           </div>
-          <button
+          <Link
             className="btn btn-primary"
             onClick={() => {
-              console.log(cart);
               setCart([...cart, { qtt: quantity, productId: id }]);
+              history.push('/checkout')
             }}
           >
             <small>Add to Cart</small>
-          </button>
+          </Link>
         </div>
       </div>
       <ConfirmationModal
