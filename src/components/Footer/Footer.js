@@ -13,7 +13,7 @@ function Footer() {
         className="navbar navbar-light  navbar-static-bottom"
         style={{ opacity: ".8" }}
       >
-        <div className="flex-column align-content-start">
+        <div className=" flex-column align-content-start">
           <div className='d-flex justify-content-between'>
             <h6 className="m-0 text-dark">ANGELO RAIMONDI </h6>
            <div>
@@ -121,7 +121,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="contacts">
           <p className=" m-0">
            <small>
               Developed by: <strong>Angelo Raimondi, SamuelFonseca</strong> &{" "}

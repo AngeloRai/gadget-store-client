@@ -1,0 +1,49 @@
+.product-img {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+}
+
+.badgets-fixed-height {
+  height: 15px;
+  max-height: 15px;
+}
+
+/* .card-fixed-height {
+  height: 500px;
+  max-height: 500px;
+  max-width: 200px;
+} */
+
+.card-img-container {
+  height: 270px;
+  max-height: 270px;
+}
+
+.card-title-fixed-height {
+  height: 50px;
+  min-height: 50px;
+  margin: 0;
+  display: flex block;
+  align-items: center;
+}
+
+.original-price-fixed-height {
+  height: 25px;
+  max-height: 25px;
+}
+
+.card-outer-body {
+  padding: 10px;
+  height: 400px
+} 
+
+.card-description {
+  text-align: center;
+  min-height: 60px;
+}
+
+.price {
+  min-height: 50px;
+  text-align: center;
+}
