@@ -19,26 +19,20 @@ function ProductCard(props) {
             alt="product"
           />
         </div>
-
-        
-
-          <div className='d-flex justify-content-center badgets-fixed-height mb-3'>
+          <div className='d-flex justify-content-center badgets-fixed-height m-3'>
             {props.product.condition==="NEW" ? <span className="badge bg-success text-white mx-1" style={{fontSize: "10px"}}>NEW</span> : <span className="badge bg-primary text-white mx-1" style={{fontSize: "10px"}}>USED</span>}
             {props.product.discount ? <span className="badge bg-danger text-white justify-content-evenly mx-1" style={{fontSize: "10px"}}>{props.product.discount}%</span> : null
             }
           </div>
-
           <h4
             title={props.product.model}
             className="card-title card-title-fixed-height text-center my-2 text-secondary"
           >
             <strong>{props.product.model}</strong>
           </h4>
-
           <div className='card-description my-3'>
           {props.product.description}
           </div>
-
           <div className='original-price-fixed-height text-center'>
             {props.product.discount ? <span className="card-text" style={{fontSize: '10px', textDecoration: "line-through", color: "darkgray"}}>
               {Number(props.product.price).toLocaleString(
@@ -47,7 +41,6 @@ function ProductCard(props) {
               )}
             </span> : <span className="card-text text-center" style={{fontSize: '10px', textDecoration: "line-through", color: "white"}}>|</span>}
           </div>
-          
           {props.product.discount ? 
           <h5 className="card-text price">
             {Number((props.product.price * (100-props.product.discount))/100).toLocaleString(
@@ -61,7 +54,6 @@ function ProductCard(props) {
             { style: "currency", currency: "BRL" }
           )}
         </h5>}
-        
       </div>
     </Link>
   );

@@ -155,7 +155,7 @@ function ProductDetails() {
           </p>
 
           <div className="form-group d-inline-block mr-3">
-            <label htmlFor="productDetailQuantity"><small><strong>Quantity:</strong></small> </label>
+            <label htmlFor="productDetailQuantity"><small><strong>Quantity:</strong></small></label>
             <input
               max={state.qtt_in_stock}
               min={1}
@@ -167,7 +167,7 @@ function ProductDetails() {
             />
           </div>
           <Link
-            className="btn btn-primary"
+            className="btn btn-sm btn-primary"
             onClick={() => {
               setCart([...cart, { qtt: quantity, productId: id }]);
               history.push('/checkout')
