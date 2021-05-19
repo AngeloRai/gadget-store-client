@@ -15,14 +15,14 @@ function ProductCreate() {
     category: "",
     model: "",
     brand: "Apple",
+    description: "",
+    discount: "",
+    image_url: "",
     cost: 0,
     price: 0,
-    discount: "",
-    description: "",
-    color: "",
-    condition: "",
     qtt_in_stock: 0,
-    image_url: "",
+    color: '',
+    condition: ''
   });
 
   function handleChange(event) {
