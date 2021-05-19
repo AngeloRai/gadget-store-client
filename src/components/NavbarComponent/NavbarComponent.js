@@ -22,43 +22,42 @@ function NavbarComponent() {
         </NavLink>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <NavLink className="nav-link" activeClassName="active" to="/">
-            HOME
-          </NavLink>
-          <NavLink className="nav-link" activeClassName="active" to="/iphone">
-            IPHONE
-          </NavLink>
-          <NavLink className="nav-link" activeClassName="active" to="/iphone">
-            IPAD
-          </NavLink>
-          <NavLink className="nav-link" activeClassName="active" to="/iphone">
-            APPLE WATCH
-          </NavLink>
-          <NavLink className="nav-link" activeClassName="active" to="/iphone">
-            ACCESSORIES
-          </NavLink>
-          <NavLink
-            className="nav-link"
-            activeClassName="active"
-            to="/all-products"
-          >
-            ALL PRODUCTS
-          </NavLink>
-          {loggedInUser.user.role === "ADMIN" ? (
-            <li className="nav-item">
-              <NavLink
-                className="nav-link"
-                activeClassName="active"
-                to="/create-product"
-              >
-                CREATE PRODUCT
-              </NavLink>
-            </li>
-          ) : null}
-        </Nav>
-        <Nav>
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto">
+            <NavLink className="nav-link" activeClassName="active" to="/">
+              HOME
+            </NavLink>
+            <NavLink className="nav-link" activeClassName="active" to="/iphone">
+              IPHONE
+            </NavLink>
+            <NavLink className="nav-link" activeClassName="active" to="/iphone">
+              IPAD
+            </NavLink>
+            <NavLink className="nav-link" activeClassName="active" to="/iphone">
+              APPLE WATCH
+            </NavLink>
+            <NavLink className="nav-link" activeClassName="active" to="/iphone">
+              ACCESSORIES
+            </NavLink>
+            <NavLink
+              className="nav-link"
+              activeClassName="active"
+              to="/all-products"
+            >
+              ALL PRODUCTS
+            </NavLink>
+            {loggedInUser.user.role === "ADMIN" ? (
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  activeClassName="active"
+                  to="/create-product"
+                >
+                  CREATE PRODUCT
+                </NavLink>
+              </li>
+            ) : null}
+          </Nav>
           {loggedInUser.user.name ? (
             <div className="d-flex align-items-center">
               <Dropdown>
@@ -66,11 +65,14 @@ function NavbarComponent() {
                   id="dropdown-basic"
                   style={{ backgroundColor: "#0a0a0a", border: "none" }}
                 >
-                  <img
-                    src={`https://ui-avatars.com/api/?name=${loggedInUser.user.name}&size=32&background=random`}
-                    className="rounded-circle"
-                    alt="Profile"
-                  />
+                  <span className="mr-2">
+                    Hi, {loggedInUser.user.name.split(" ")[0]}!
+                  </span>
+                  {/* <img
+                      src={`https://ui-avatars.com/api/?name=${loggedInUser.user.name}&size=32&background=random`}
+                      className="rounded-circle"
+                      alt="Profile"
+                    /> */}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item to="/profile" as={NavLink}>
@@ -88,7 +90,6 @@ function NavbarComponent() {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-              <Cart />
             </div>
           ) : (
             <NavLink
@@ -99,8 +100,8 @@ function NavbarComponent() {
               LOGIN
             </NavLink>
           )}
-        </Nav>
-      </Navbar.Collapse>
+        </Navbar.Collapse>
+        <Nav>{loggedInUser.user.name ? <Cart /> : null}</Nav>
     </Navbar>
   );
 }

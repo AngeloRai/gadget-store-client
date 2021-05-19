@@ -15,7 +15,6 @@ function ProductFeed() {
         const response = await api.get("/product");
 
         setProduct([...response.data]);
-        setFilteredProducts([...response.data]);
       } catch (err) {
         console.error(err);
       }
@@ -24,16 +23,17 @@ function ProductFeed() {
     fetchProducts();
   }, []);
 
+  
   useEffect(() => {
     async function fetchProducts() {
-      
       try {
-        if(products && searchWord){
-          const filteredArray = products.filter((gadget) =>
+        let filteredArray = []
+        if (products.length!==0 && searchWord.length!==0) {
+          filteredArray = products.filter((gadget) =>
           gadget.model.toLowerCase().includes(searchWord.toLowerCase())
         );
-        setFilteredProducts([...filteredArray])}
-        
+      }
+      setFilteredProducts([...filteredArray])
       } catch (err) {
         console.error(err);
       }

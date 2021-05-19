@@ -12,10 +12,11 @@ function ProductForm(props) {
             onChange={props.handleChange}
             value={props.state.category}
           >
-            <option value="iPhone">mobile</option>
-            <option value="iPad">tablet</option>
-            <option value="Watch">watch</option>
-            <option value="Accessories">accessories</option>
+            <option value="N/A"></option>
+            <option value="mobile">mobile</option>
+            <option value="tablet">tablet</option>
+            <option value="watch">watch</option>
+            <option value="accessories">accessories</option>
           </select>
         </div>
         <div className="form-group col mx-2">
@@ -53,6 +54,7 @@ function ProductForm(props) {
             onChange={props.handleChange}
             value={props.state.color}
           >
+            <option value="N/A"></option>
             <option value="white">white</option>
             <option value="black">black</option>
             <option value="grey">grey</option>
@@ -126,13 +128,14 @@ function ProductForm(props) {
         <div className="form-group col">
           <label htmlFor="gadgetFormCondition">Condition</label>
           <select
-             type="text"
+            type="text"
             className="form-control"
             id="gadgetFormCondition"
             name="condition"
             onChange={props.handleChange}
             value={props.state.condition}
           >
+            <option value="N/A"></option>
             <option value="NEW">NEW</option>
             <option value="USED">USED</option>
           </select>
@@ -163,6 +166,7 @@ function ProductForm(props) {
           onChange={props.handleChange}
         />
       </div>
+
       <hr />
       <button type="submit" className="btn btn-primary">
         Submit
