@@ -11,7 +11,7 @@ function NavbarComponent() {
   const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" style={{backgroundColor: 'black', opacity: 0.85}} variant="dark">
       <Navbar.Brand href="#home">
         <NavLink className="ml-3 navbar-brand" to="/">
           <img
