@@ -20,7 +20,7 @@ function Iphone() {
   }, []);
 
   return (
-    <div className="" style={{ paddingBottom: "100px" }}>
+    <div className="">
       {/* iPhone List */}
       <ProductSingleCategory
         listTitle="iPhones"

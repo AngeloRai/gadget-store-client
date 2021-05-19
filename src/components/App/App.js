@@ -13,7 +13,7 @@ import Navbar from "../NavbarComponent/NavbarComponent";
 import HeroCarousel from '../HeroCarousel/HeroCarousel'
 import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
 import Iphone from '../../routeComponents/product/Iphone/Iphone'
-import Footer from '../Footer'
+import Footer from '../Footer/Footer'
 
 import Home from "../../routeComponents/product/Home/Home";
 import ProductDetail from "../../routeComponents/product/ProductDetail/ProductDetail";
@@ -33,7 +33,7 @@ function App() {
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
-          <div className="container mt-5" >
+          <div className="container mt-5" style={{minHeight: "calc(100vh - 265px)"}}>
           <Route exact path="/" component={HeroCarousel}/>
             <Switch>
               <Route exact path="/" component={Home} />
@@ -64,7 +64,7 @@ function App() {
               <Route exact path="/order/success" component={OrderSuccess} />
             </Switch>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </CartContextComponent>
       </AuthContextComponent>
     </BrowserRouter>
