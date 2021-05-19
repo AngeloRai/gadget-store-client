@@ -24,20 +24,20 @@ function ProductFeed() {
   return (
     <div className="container-fluid" style={{ paddingBottom: "100px" }}>
       {/* Contains all the lists shown in the home-screen */}
-      <div className="container-fluid movie-app">
-        {/* New iphones List */}
-        <ProductList
-          listTitle="New Iphones"
-          contentList={products.filter((product) => product.category === "mobile" && product.condition === "NEW")}
-        />
-      </div>
+
+      {/* New iphones List */}
+      {/* <ProductList
+        listTitle="New Iphones"
+        contentList={products.filter((product) => product.category === "mobile" && product.condition === "NEW")}
+      /> */}
+
       {/* Used iphones List */}
-      <ProductList
+      {/* <ProductList
         listTitle="Used Iphones"
         contentList={products.filter((product) => product.category === "mobile" && product.condition === "USED")}
-      />
+      /> */}
       <ProductList
-        listTitle="All Products"
+        listTitle="ALL PRODUCTS"
         contentList={products}
       />
     </div>

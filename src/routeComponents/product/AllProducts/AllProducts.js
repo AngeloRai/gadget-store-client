@@ -62,7 +62,7 @@ function ProductFeed() {
         {searchWord && <div className="container-fluid movie-app">
         {/* New iphones List */}
         <ProductList
-          listTitle="Search Result"
+          listTitle="SEARCH RESULTS"
           contentList={filteredProducts}
         />
       </div>}
@@ -71,7 +71,7 @@ function ProductFeed() {
       <div className="container-fluid movie-app">
         {/* New iphones List */}
         <ProductList
-          listTitle="New Iphones"
+          listTitle="NEW IPHONES"
           contentList={products.filter(
             (product) =>
               product.category === "mobile" && product.condition === "NEW"
@@ -80,13 +80,13 @@ function ProductFeed() {
       </div>
       {/* Used iphones List */}
       <ProductList
-        listTitle="Used Iphones"
+        listTitle="USED IPHONES"
         contentList={products.filter(
           (product) =>
             product.category === "mobile" && product.condition === "USED"
         )}
       />
-      <ProductList listTitle="All Products" contentList={products} />
+      <ProductList listTitle="ALL PRODUCTS" contentList={products} />
     </div>
   );
 }
