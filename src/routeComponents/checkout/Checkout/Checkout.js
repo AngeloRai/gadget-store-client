@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
+import { BiTrash } from "react-icons/bi"
+import "./Checkout.css"
 
 import { CartContext } from "../../../contexts/cartContext";
 import { AuthContext } from "../../../contexts/authContext";
@@ -12,7 +14,7 @@ const stripePromise = loadStripe(
 );
 
 function Checkout() {
-  const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
   const { loggedInUser } = useContext(AuthContext);
 
   const [state, setState] = useState([]);
@@ -24,9 +26,10 @@ function Checkout() {
       for (let productInCart of cart) {
         const response = await api.get(`/product/${productInCart.productId}`);
 
-        const { _id, image_url, price, name } = response.data;
+        const selectedQuantity = productInCart.qtt
 
-        tempState.push({ _id, image_url, price, name, qtt: productInCart.qtt });
+
+        tempState.push({ ...response.data, selectedQuantity });
       }
 
       setState([...tempState]);
@@ -34,7 +37,6 @@ function Checkout() {
     fetchProducts();
   }, [cart]);
 
-  console.log(cart);
 
   async function handleSubmit() {
     try {
@@ -68,44 +70,93 @@ function Checkout() {
 
   return (
     <div className="m-5">
-      <h1 className="mb-2">Order Summary</h1>
+      <h4 className='text-secondary text-center mb-3'>ORDER SUMARY</h4>
       <div className="list-group">
         {state.map((product) => {
           return (
             <Link
               key={product._id}
               to={`/product/${product._id}`}
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action p-2"
             >
-              <div className="d-flex w-100 justify-content-between row">
-                <div className="col-4">
+              <div className="row">
+                <div className="col-12 col-sm-6 col-md-6 d-flex justify-content-center align-items-center">
                   <img
-                    className="mw-100"
-                    src={product.image_url}
+                    style={{ height: "170px" }}
+                    src={product.image_url[0]}
                     alt={product.name}
                   />
                 </div>
 
-                <div className="col-8">
-                  <h5 className="mb-1">{product.name}</h5>
-                  <h3>
-                    {product.price.toLocaleString(
-                      window.navigator.languages[0],
-                      { style: "currency", currency: "USD" }
-                    )}
-                  </h3>
-                  <small>Quantity: {product.qtt}</small>
+                <div className="card-body col-12 col-sm-6 col-md-6 p-3">
+                  <h4 className="card-title">
+                    <small>{product.model}</small>
+                  </h4>
+
+                  <div className='d-flex badgets-fixed-height mb-3'>
+                    {product.condition === "NEW" ? <span className="badge bg-success text-white mx-1" style={{ fontSize: "10px" }}>NEW</span> : <span className="badge bg-primary text-white mx-1" style={{ fontSize: "10px" }}>USED</span>}
+                    {product.discount ? <span className="badge bg-danger text-white justify-content-evenly mx-1" style={{ fontSize: "10px" }}>{product.discount}%</span> : null
+                    }
+                  </div>
+
+                  <p className="card-text mb-0">
+                    <small><strong>Description:</strong> {product.description}</small>
+                  </p>
+
+                  <p className="card-title">
+                    <small><strong>Color:</strong> {product.color}</small>
+                  </p>
+
+                  <div className='original-price-fixed-height'>
+                    {product.discount ? <span className="card-text" style={{ fontSize: '13px', textDecoration: "line-through", color: "darkgray" }}>
+                      {Number(product.price).toLocaleString(
+                        window.navigator.languages[0],
+                        { style: "currency", currency: "BRL" }
+                      )}
+                    </span> : null}
+                  </div>
+
+                  {product.discount ?
+                    <h4 className="card-text">
+                      {Number((product.price * (100 - product.discount)) / 100).toLocaleString(
+                        window.navigator.languages[0],
+                        { style: "currency", currency: "BRL" }
+                      )}
+                    </h4> :
+                    <h4 className="card-text">
+                      {Number(product.price).toLocaleString(
+                        window.navigator.languages[0],
+                        { style: "currency", currency: "BRL" }
+                      )}
+                    </h4>}
+
+                  <p>
+                    <small><strong>Selected quantity:</strong> {product.selectedQuantity} units</small>
+                  </p>
+
+                  <div className='d-flex justify-content-center'>
+                    <button className="btn btn-sm btn-danger" onClick={() => setCart(cart.filter(x => x.productId !== product._id))}>
+                      <BiTrash className='size' />
+                    </button>
+                  </div>
+
                 </div>
+
+
               </div>
             </Link>
           );
         })}
-
-        <button className="btn btn-primary btn-lg mt-3" onClick={handleSubmit}>
-          Confirm Order
-        </button>
+        <div className='d-flex justify-content-center'>
+          <Link to="/" className="btn btn-primary btn-sm mx-2 mt-3">
+            Keep Buying
+          </Link>
+          <button className="btn btn-success btn-sm mx-2 mt-3" onClick={handleSubmit}>
+            Confirm Order
+          </button>
+        </div>
       </div>
-    </div>
+    </div >
   );
 }
 
