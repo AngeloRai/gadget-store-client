@@ -35,7 +35,7 @@ function ProductDetails() {
 
 
   useEffect(() => {
-    async function fetchBeer() {
+    async function fetchProduct() {
       try {
         const response = await api.get(`/product/${id}`);
 
@@ -44,7 +44,7 @@ function ProductDetails() {
         console.error(err);
       }
     }
-    fetchBeer();
+    fetchProduct();
   }, [id]);
 
   const responsive = {
@@ -74,7 +74,7 @@ function ProductDetails() {
               Edit
             </Link>
             {/* A confirmation Modal pops up before deleting the product */}
-            <button className="btn btn-danger" onClick={() => setShowModal(true)}>
+            <button className="btn btn-danger mr-4" onClick={() => setShowModal(true)}>
               Delete
             </button>
           </div>

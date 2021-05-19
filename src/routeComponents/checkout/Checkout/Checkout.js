@@ -2,10 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 
-import { CartContext } from "../../contexts/cartContext";
-import { AuthContext } from "../../contexts/authContext";
+import { CartContext } from "../../../contexts/cartContext";
+import { AuthContext } from "../../../contexts/authContext";
 
-import api from "../../apis/index.js";
+import api from "../../../apis/index.js";
 
 const stripePromise = loadStripe(
   "pk_test_51IsYVoATzq9KAk7iZUS2hY4j12KsV7GK5nLPdtgDuLS4feXBHu0fNFlOsW2BHxMndlRPMhbcUC8YUEk94hP4npqs00D7WvYZji"

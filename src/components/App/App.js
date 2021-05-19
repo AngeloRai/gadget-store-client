@@ -21,8 +21,8 @@ import ProductCreate from "../../routeComponents/product/ProductCreate";
 import ProductEdit from "../../routeComponents/product/ProductEdit";
 import ProductDelete from "../../routeComponents/product/ProductDelete";
 
-import Checkout from "../../routeComponents/checkout/Checkout";
-import OrderSuccess from "../../routeComponents/checkout/OrderSuccess";
+import Checkout from "../../routeComponents/checkout/Checkout/Checkout";
+import OrderSuccess from "../../routeComponents/checkout/OrderSuccess/OrderSuccess";
 
 import { AuthContextComponent } from "../../contexts/authContext";
 import { CartContextComponent } from "../../contexts/cartContext";
@@ -49,7 +49,7 @@ function App() {
                 path="/create-product"
                 component={ProductCreate}
               />
-              <Route exact path="/product/:id" component={ProductDetail} />
+              <Route exact path="/product/:id" component={ProductDetail}/>
               <AdminRoute
                 exact
                 path="/product/edit/:id"
