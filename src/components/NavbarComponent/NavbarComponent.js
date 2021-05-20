@@ -113,7 +113,7 @@ function NavbarComponent() {
                   Hi, {loggedInUser.user.name.split(" ")[0]}!
                 </span>
               </Dropdown.Toggle>
-              <Dropdown.Menu className="overlay">
+              <Dropdown.Menu>
                 <Dropdown.Item to="/profile" as={NavLink}>
                   PROFILE
                 </Dropdown.Item>

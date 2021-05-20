@@ -2,7 +2,6 @@ import { Carousel } from "react-bootstrap";
 import './HeroCarousel.css'
 import { Link } from 'react-router-dom'
 
-
 import carousel1 from '../../images/carousel1.png'
 import carousel2 from '../../images/carousel2.png'
 import carousel3 from '../../images/carousel3.png'
@@ -14,7 +13,7 @@ import carousel5 from '../../images/carousel5.png'
 function HeroCarousel(props) {
 
   return (
-    <Carousel>
+    <Carousel style={{zIndex: '-1'}}>
       <Carousel.Item>
         <Link to="/iphone">
           <img

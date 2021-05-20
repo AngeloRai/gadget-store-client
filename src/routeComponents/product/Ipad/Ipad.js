@@ -50,34 +50,33 @@ function Ipad() {
       <div className="container mt-5" style={{ minHeight: "calc(100vh - 265px)" }}>
 
         <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-         <div className="form-group mb-4 d-flex justify-content-center">
-        <input
-          placeholder="SEARCH"
-          type="text"
-          className="w-50 form-control shadow-none no-border"
-          id="searchWord"
-          name="searchWord"
-          onChange={handleChange}
-          value={searchWord}
-        />
-      </div>
+          <div className="form-group mb-4 d-flex justify-content-center">
+            <input
+              placeholder="SEARCH"
+              type="text"
+              className="w-50 form-control shadow-none no-border"
+              id="searchWord"
+              name="searchWord"
+              onChange={handleChange}
+              value={searchWord}
+            />
           </div>
+        </div>
 
-          {searchWord && <div className="container-fluid">
-            {/* New Ipads List */}
-            <ProductSingleCategory
-              listTitle="Search Result"
-              contentList={filteredProducts}
-            />
-          </div>}
-          <div className="">
-            {/* Ipad List */}
-            <ProductSingleCategory
-              listTitle=""
-              contentList={products.filter(
-                (product) => product.category === "tablet")}
-            />
-          </div>
+        {searchWord && <div className="container-fluid">
+          {/* New Ipads List */}
+          <ProductSingleCategory
+            listTitle="Search Result"
+            contentList={filteredProducts}
+          />
+        </div>}
+        <div className="">
+          {/* Ipad List */}
+          <ProductSingleCategory
+            listTitle=""
+            contentList={products.filter(
+              (product) => product.category === "tablet")}
+          />
         </div>
       </div>
     </>
