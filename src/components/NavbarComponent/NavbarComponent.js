@@ -101,7 +101,9 @@ function NavbarComponent() {
           ) : null}
         </Nav>
         {loggedInUser.user.name ? (
+
           <div className="d-flex  justify-content-center " >
+
             <Dropdown>
               <Dropdown.Toggle
                 id="dropdown-basic"
@@ -111,7 +113,7 @@ function NavbarComponent() {
                   Hi, {loggedInUser.user.name.split(" ")[0]}!
                 </span>
               </Dropdown.Toggle>
-              <Dropdown.Menu>
+              <Dropdown.Menu className="overlay">
                 <Dropdown.Item to="/profile" as={NavLink}>
                   PROFILE
                 </Dropdown.Item>

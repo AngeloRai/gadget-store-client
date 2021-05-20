@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import ProductSingleCategory from "../ProductSingleCategory/ProductSingleCategory";
 import api from "../../../apis/index";
+import iphone from "../../../images/iphone.png"
 
 function Iphone() {
   const [products, setProduct] = useState([]);
@@ -25,6 +26,7 @@ function Iphone() {
     async function fetchProducts() {
       try {
         let filteredArray = [];
+
         if (products.length !== 0 && searchWord.length !== 0) {
           filteredArray = products.filter((gadget) =>
             gadget.model.toLowerCase().includes(searchWord.toLowerCase())
@@ -43,8 +45,11 @@ function Iphone() {
   }
 
   return (
-    <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-      <div className="form-group mb-4 d-flex justify-content-center">
+    <>
+      <img src={iphone} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='iphone' />
+      <div className="container mt-5" style={{ minHeight: "calc(100vh - 265px)" }}>
+        <div className="container-fluid" style={{ paddingBottom: "100px" }}>
+           <div className="form-group mb-4 d-flex justify-content-center">
         <input
           placeholder="SEARCH"
           type="text"
@@ -56,25 +61,24 @@ function Iphone() {
         />
       </div>
 
-      {searchWord && (
-        <div className="container-fluid">
-          {/* New iphones List */}
-          <ProductSingleCategory
-            listTitle="Search Result"
-            contentList={filteredProducts}
-          />
+          {searchWord && <div className="container-fluid">
+            {/* New iphones List */}
+            <ProductSingleCategory
+              listTitle="Search Result"
+              contentList={filteredProducts}
+            />
+          </div>}
+          <div className="">
+            {/* iPhone List */}
+            <ProductSingleCategory
+              listTitle=""
+              contentList={products.filter(
+                (product) => product.category === "mobile")}
+            />
+          </div>
         </div>
-      )}
-      <div className="">
-        {/* iPhone List */}
-        <ProductSingleCategory
-          listTitle="iPhones"
-          contentList={products.filter(
-            (product) => product.category === "mobile"
-          )}
-        />
       </div>
-    </div>
+    </>
   );
 }
 

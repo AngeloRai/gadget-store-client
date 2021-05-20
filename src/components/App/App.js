@@ -37,40 +37,40 @@ function App() {
       <AuthContextComponent>
         <CartContextComponent>
           <Navbar />
-            <Route exact path="/" component={HeroCarousel} />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
-                <Route exact path="/all-products" component={AllProducts} />
-                <Route exact path="/iphone" component={Iphone} />
-                <Route exact path="/ipad" component={Ipad} />
-                <Route exact path="/signup" component={Signup} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/forgot-password" component={ForgotPassword} />
-                <Route exact path="/password-reset" component={ResetPassword} />
-                <Route exact path="/watch" component={Watch} />
-                <Route exact path="/accessories" component={Accessories} />
-                <ProtectedRoute exact path="/profile" component={Profile} />
-                <AdminRoute
-                  exact
-                  path="/create-product"
-                  component={ProductCreate}
-                />
-                <Route exact path="/product/:id" component={ProductDetail} />
-                <AdminRoute
-                  exact
-                  path="/product/edit/:id"
-                  component={ProductEdit}
-                />
-                <AdminRoute
-                  exact
-                  path="/product/delete/:id"
-                  component={ProductDelete}
-                />
-                <ProtectedRoute exact path="/checkout" component={Checkout} />
-                <Route exact path="/order/success" component={OrderSuccess} />
-              </div>
-            </Switch>
+          <Route exact path="/" component={HeroCarousel} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/iphone" component={Iphone} />
+            <Route exact path="/ipad" component={Ipad} />
+            <Route exact path="/watch" component={Watch} />
+            <Route exact path="/accessories" component={Accessories} />
+            <Route exact path="/all-products" component={AllProducts} />
+            <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/forgot-password" component={ForgotPassword} />
+              <Route exact path="/password-reset" component={ResetPassword} />
+              <ProtectedRoute exact path="/profile" component={Profile} />
+              <AdminRoute
+                exact
+                path="/create-product"
+                component={ProductCreate}
+              />
+              <Route exact path="/product/:id" component={ProductDetail} />
+              <AdminRoute
+                exact
+                path="/product/edit/:id"
+                component={ProductEdit}
+              />
+              <AdminRoute
+                exact
+                path="/product/delete/:id"
+                component={ProductDelete}
+              />
+              <ProtectedRoute exact path="/checkout" component={Checkout} />
+              <Route exact path="/order/success" component={OrderSuccess}/>
+            </div>
+          </Switch>
           <Footer />
         </CartContextComponent>
       </AuthContextComponent>

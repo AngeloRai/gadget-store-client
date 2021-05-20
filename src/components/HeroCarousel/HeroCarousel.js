@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import './HeroCarousel.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 import carousel1 from '../../images/carousel1.png'
@@ -14,7 +14,6 @@ import carousel5 from '../../images/carousel5.png'
 function HeroCarousel(props) {
 
   return (
-
     <Carousel>
       <Carousel.Item>
         <Link to="/iphone">

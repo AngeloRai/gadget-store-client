@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ProductList from "../../../components/ProductList/ProductList";
 import api from "../../../apis/index";
 import "./AllProducts.css";
+import allProducts from "../../../images/allProducts.png"
 
 function ProductFeed() {
   const [products, setProduct] = useState([]);
@@ -22,6 +23,7 @@ function ProductFeed() {
 
     fetchProducts();
   }, []);
+
 
   useEffect(() => {
     async function fetchProducts() {
@@ -45,8 +47,11 @@ function ProductFeed() {
   }
 
   return (
-    <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-      <div className="form-group mb-4 d-flex justify-content-center">
+    <>
+      <img src={allProducts} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='all products' />
+      <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
+        <div className="container-fluid" style={{ paddingBottom: "100px" }}>
+          <div className="form-group mb-4 d-flex justify-content-center">
         <input
           placeholder="SEARCH"
           type="text"
@@ -56,18 +61,38 @@ function ProductFeed() {
           onChange={handleChange}
           value={searchWord}
         />
-      </div>
+          </div>
 
-      {searchWord && (
-        <div className="container-fluid">
-          {/* New iphones List */}
+          {searchWord && <div className="container-fluid">
+            {/* New iphones List */}
+            <ProductList
+              listTitle="SEARCH RESULTS"
+              contentList={filteredProducts}
+            />
+          </div>}
+
+          {/* Contains all the lists shown in the home-screen */}
+          <div className="container-fluid">
+            {/* New iphones List */}
+            <ProductList
+              listTitle="NEW IPHONES"
+              contentList={products.filter(
+                (product) =>
+                  product.category === "mobile" && product.condition === "NEW"
+              )}
+            />
+          </div>
+          {/* Used iphones List */}
           <ProductList
-            listTitle="SEARCH RESULTS"
-            contentList={filteredProducts}
+            listTitle="USED IPHONES"
+            contentList={products.filter(
+              (product) =>
+                product.category === "mobile" && product.condition === "USED"
+            )}
           />
+          <ProductList listTitle="ALL PRODUCTS" contentList={products} />
         </div>
       )}
-
       {/* Contains all the lists shown in the home-screen */}
       <div className="container-fluid">
         {/* New iphones List */}
@@ -79,16 +104,7 @@ function ProductFeed() {
           )}
         />
       </div>
-      {/* Used iphones List */}
-      <ProductList
-        listTitle="USED IPHONES"
-        contentList={products.filter(
-          (product) =>
-            product.category === "mobile" && product.condition === "USED"
-        )}
-      />
-      <ProductList listTitle="ALL PRODUCTS" contentList={products} />
-    </div>
+    </>
   );
 }
 
