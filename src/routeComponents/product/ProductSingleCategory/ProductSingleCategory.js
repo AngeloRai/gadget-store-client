@@ -7,7 +7,7 @@ function ProductSingleCategory(props) {
   if (props.contentList) {
     return (
       <div className=" mb-5 flex-column">
-        <div className="d-flex-block text-center text-secondary mb-5">
+        <div className="d-flex-block text-center text-secondary mb-1">
           <h2>{props.listTitle.toUpperCase()}</h2>
         </div>
         <div className="row">

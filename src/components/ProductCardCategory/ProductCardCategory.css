@@ -21,8 +21,8 @@
 }
 
 .card-title-fixed-height-c {
-  height: 50px;
-  min-height: 50px;
+  height: 30px;
+  min-height: 30px;
   margin: 0;
   display: flex block;
   align-items: center;
@@ -40,7 +40,7 @@
 
 .card-description-c {
   text-align: center;
-  height: 85px;
+  height: 75px;
   font-size: 14px;
 }
 
@@ -61,7 +61,7 @@ html {
 }
 
 .truncate-overflow::before {
-  content: "...";
+  /* content: "..."; */
   position: absolute;
   bottom: 0;
   right: 0;
