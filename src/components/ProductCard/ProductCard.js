@@ -17,7 +17,7 @@ function ProductCard(props) {
             className="card-img product-img"
             src={props.product.image_url[0]}
             alt="product"
-            style={{height: "150px"}}
+            
           />
         </div>
 
