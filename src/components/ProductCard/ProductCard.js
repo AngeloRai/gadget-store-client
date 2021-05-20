@@ -17,6 +17,10 @@ function ProductCard(props) {
             className="card-img product-img"
             src={props.product.image_url[0]}
             alt="product"
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 73491dc3be384a6992c498081571dd45018580d4
           />
         </div>
 
