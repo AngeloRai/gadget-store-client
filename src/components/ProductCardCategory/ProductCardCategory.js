@@ -30,13 +30,9 @@ function ProductCard(props) {
           >
             <strong>{props.product.model}</strong>
           </h5>
-          <div className='card-description-c my-3 truncate-overflow'>
+          <div className='card-description-c my-1 truncate-overflow'>
           {props.product.description}
           </div>
-
-
-
-
           <div className='original-price-fixed-height-c text-center'>
             {props.product.discount ? <span className="card-text" style={{fontSize: '10px', textDecoration: "line-through", color: "darkgray"}}>
               {Number(props.product.price).toLocaleString(
@@ -52,7 +48,7 @@ function ProductCard(props) {
               { style: "currency", currency: "BRL" }
             )}
           </h5> : 
-          <h5 className="card-text price">
+          <h5 className="card-text price-c">
           {Number(props.product.price ).toLocaleString(
           "pt-BR",
             { style: "currency", currency: "BRL" }
