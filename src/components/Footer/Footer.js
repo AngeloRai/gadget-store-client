@@ -22,26 +22,7 @@ function Footer() {
             >
               <h6 className="m-0 name-text text-secondary">ANGELO RAIMONDI </h6>
             </a>
-            <div className="d-flex align-items-start">
-              <a
-                className="d-flex align-items-center"
-                href="https://www.instagram.com/raimondiangelo/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                &nbsp;
-                <FaInstagram className="fa-icons mx-1 text-secondary" />
-                &nbsp;
-              </a>
-              <a
-                className="d-flex align-items-center"
-                href="https://www.facebook.com/ang.raimondi"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebookSquare className="fa-icons mx-1 " />
-                &nbsp;
-              </a>
+            <div className="fa-icon-container d-flex align-items-start">
               <a
                 className="d-flex align-items-center"
                 href="https://github.com/AngeloRai"
@@ -70,24 +51,7 @@ function Footer() {
             >
               <h6 className="m-0 name-text text-secondary">SAMUEL FONSECA </h6>
             </a>
-            <div>
-              <a
-                href="https://www.instagram.com/raimondiangelo/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                &nbsp;
-                <FaInstagram className="fa-icons mx-1 text-secondary" />
-                &nbsp;
-              </a>
-              <a
-                href="https://www.facebook.com/ang.raimondi"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebookSquare className="fa-icons mx-1 " />
-                &nbsp;
-              </a>
+            <div className="fa-icon-container d-flex align-items-start">
               <a
                 href="https://github.com/AngeloRai"
                 target="_blank"
@@ -117,24 +81,7 @@ function Footer() {
                 THIAGO EVANGELISTA{" "}
               </h6>
             </a>
-            <div>
-              <a
-                href="https://www.instagram.com/thiagoevg/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                &nbsp;
-                <FaInstagram className="fa-icons mx-1 text-secondary" />
-                &nbsp;
-              </a>
-              <a
-                href="https://www.facebook.com/thiago.evangelista.31"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebookSquare className="fa-icons mx-1 " />
-                &nbsp;
-              </a>
+            <div className="fa-icon-container d-flex align-items-start">
               <a
                 href="https://github.com/thiagoevg"
                 target="_blank"
