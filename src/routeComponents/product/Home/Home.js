@@ -6,6 +6,7 @@ import api from "../../../apis/index";
 import './Home.css'
 import home7 from "../../../images/home7.png"
 import home5 from "../../../images/home5.png"
+import home8 from "../../../images/home8.png"
 
 
 function ProductFeed() {
@@ -31,20 +32,14 @@ function ProductFeed() {
         <img src={home5} className='img-fluid mb-4 w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
       </Link>
 
-      <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-        {/* Contains all the lists shown in the home-screen */}
-
-        {/* New iphones List */}
-        {/* <ProductList
+      <div className="container-fluid" style={{ paddingBottom: "50px" }}>
+        <ProductList
           listTitle="IPHONES"
           contentList={products.filter((product) => product.category === "mobile")}
-        /> */}
-
-        {/* Used iphones List */}
-        {/* <ProductList
-          listTitle="Used Iphones"
-          contentList={products.filter((product) => product.category === "mobile" && product.condition === "USED")}
-        /> */}
+        />
+      </div>
+      <img src={home8} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+      <div className="container-fluid" style={{ paddingBottom: "50px" }}>
 
         <ProductList
           listTitle="ALL PRODUCTS"
