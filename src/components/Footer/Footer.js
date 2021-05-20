@@ -4,133 +4,167 @@ import {
   FaGithub,
   FaLinkedin,
 } from "react-icons/fa";
-import './Footer.css'
+import "./Footer.css";
 
 function Footer() {
   return (
     <div className="footer">
       <footer
-        className="navbar navbar-light  navbar-static-bottom"
-        style={{ opacity: ".8" }}
+        className="navbar   navbar-static-bottom"
+        style={{ backgroundColor: "black", opacity: 0.9 }}
       >
-        <div className=" flex-column align-content-start">
-          <div className='d-flex justify-content-between'>
-            <h6 className="m-0 text-dark">ANGELO RAIMONDI </h6>
-           <div>
+        <div className="footer-contacts ">
+          <div className="name-container">
+            <a
+              href="https://www.linkedin.com/in/angelo-raimondi-b521031/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h6 className="m-0 name-text text-secondary">ANGELO RAIMONDI </h6>
+            </a>
+            <div className="d-flex align-items-start">
               <a
+                className="d-flex align-items-center"
                 href="https://www.instagram.com/raimondiangelo/"
                 target="_blank"
                 rel="noreferrer"
               >
                 &nbsp;
-                <FaInstagram className="h6 mx-1 text-dark" />
+                <FaInstagram className="fa-icons mx-1 text-secondary" />
                 &nbsp;
               </a>
               <a
+                className="d-flex align-items-center"
                 href="https://www.facebook.com/ang.raimondi"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaFacebookSquare className="h6 mx-1 " />
+                <FaFacebookSquare className="fa-icons mx-1 " />
                 &nbsp;
               </a>
               <a
+                className="d-flex align-items-center"
                 href="https://github.com/AngeloRai"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaGithub className="h6 mx-1 text-dark" />
+                <FaGithub className="fa-icons mx-1 text-secondary" />
                 &nbsp;
               </a>
               <a
+                className="d-flex align-items-center"
                 href="https://www.linkedin.com/in/angelo-raimondi-b521031/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaLinkedin className="h6 mx-1" />
-                &nbsp;
-              </a>
-           </div>
-          </div>
-          <div className='d-flex justify-content-between'>
-            <h6 className="m-0 text-dark">SAMUEL FONSECA </h6>
-            <div>
-              <a
-                href="https://www.instagram.com/raimondiangelo/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                &nbsp;
-                <FaInstagram className="h6 mx-1 text-dark" />
-                &nbsp;
-              </a>
-              <a
-                href="https://www.facebook.com/ang.raimondi"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebookSquare className="h6 mx-1 " />
-                &nbsp;
-              </a>
-              <a
-                href="https://github.com/AngeloRai"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaGithub className="h6 mx-1 text-dark" />
-                &nbsp;
-              </a>
-              <a
-                href="https://www.linkedin.com/in/angelo-raimondi-b521031/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedin className="h6 mx-1" />
+                <FaLinkedin className="fa-icons mx-1" />
                 &nbsp;
               </a>
             </div>
           </div>
-          <div className='d-flex justify-content-between'>
-            <h6>THIAGO EVANGELISTA</h6>
+          <div className="name-container">
+            <a
+              href="https://www.linkedin.com/in/angelo-raimondi-b521031/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h6 className="m-0 name-text text-secondary">SAMUEL FONSECA </h6>
+            </a>
             <div>
-              <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-                &nbsp;
-                <FaInstagram className="h6 mx-1 text-dark" />
-                &nbsp;
-              </a>
-              <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-                <FaFacebookSquare className="h6 mx-1" />
-                &nbsp;
-              </a>
               <a
-                href="https://github.com"
+                href="https://www.instagram.com/raimondiangelo/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaGithub className="h6 mx-1 text-dark" />
+                &nbsp;
+                <FaInstagram className="fa-icons mx-1 text-secondary" />
                 &nbsp;
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://www.facebook.com/ang.raimondi"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaLinkedin className="h6 mx-1" />
+                <FaFacebookSquare className="fa-icons mx-1 " />
+                &nbsp;
+              </a>
+              <a
+                href="https://github.com/AngeloRai"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub className="fa-icons mx-1 text-secondary" />
+                &nbsp;
+              </a>
+              <a
+                href="https://www.linkedin.com/in/angelo-raimondi-b521031/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin className="fa-icons mx-1" />
+                &nbsp;
+              </a>
+            </div>
+          </div>
+
+          <div className="name-container">
+            <a
+              href="https://www.linkedin.com/in/angelo-raimondi-b521031/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h6 className="m-0 name-text text-secondary">
+                THIAGO EVANGELISTA{" "}
+              </h6>
+            </a>
+            <div>
+              <a
+                href="https://www.instagram.com/thiagoevg/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                &nbsp;
+                <FaInstagram className="fa-icons mx-1 text-secondary" />
+                &nbsp;
+              </a>
+              <a
+                href="https://www.facebook.com/thiago.evangelista.31"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaFacebookSquare className="fa-icons mx-1 " />
+                &nbsp;
+              </a>
+              <a
+                href="https://github.com/thiagoevg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub className="fa-icons mx-1 text-secondary" />
+                &nbsp;
+              </a>
+              <a
+                href="https://www.linkedin.com/in/thiagoevg/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin className="fa-icons mx-1" />
                 &nbsp;
               </a>
             </div>
           </div>
         </div>
-        <div className="contacts">
-          <p className=" m-0">
-           <small>
+        <div className="developed">
+          <p className=" m-0 text-secondary">
+            <small>
               Developed by: <strong>Angelo Raimondi, SamuelFonseca</strong> &{" "}
               <strong>Thiago Evangelista</strong>
-           </small>
+            </small>
           </p>
-          <p className=" m-0">
-            <small>© 2021 Copyright:
-            AngeloRaimondi/SamuelFonseca/ThiagoEvangelista</small>
+          <p className=" m-0 text-secondary">
+            <small>
+              © 2021 Copyright: AngeloRaimondi/SamuelFonseca/ThiagoEvangelista
+            </small>
           </p>
         </div>
       </footer>
@@ -139,5 +173,3 @@ function Footer() {
 }
 
 export default Footer;
-
-
