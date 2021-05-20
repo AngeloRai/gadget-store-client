@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 
 import ProductList from "../../../components/ProductList/ProductList";
 import api from "../../../apis/index";
 import './Home.css'
+import home7 from "../../../images/home7.png"
+import home5 from "../../../images/home5.png"
+
 
 function ProductFeed() {
   const [products, setProduct] = useState([]);
@@ -22,25 +26,33 @@ function ProductFeed() {
 
 
   return (
-    <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-      {/* Contains all the lists shown in the home-screen */}
+    <>
+      <Link to="/iphone">
+        <img src={home5} className='img-fluid mb-4 w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+      </Link>
 
-      {/* New iphones List */}
-      {/* <ProductList
-        listTitle="New Iphones"
-        contentList={products.filter((product) => product.category === "mobile" && product.condition === "NEW")}
-      /> */}
+      <div className="container-fluid" style={{ paddingBottom: "100px" }}>
+        {/* Contains all the lists shown in the home-screen */}
 
-      {/* Used iphones List */}
-      {/* <ProductList
-        listTitle="Used Iphones"
-        contentList={products.filter((product) => product.category === "mobile" && product.condition === "USED")}
-      /> */}
-      <ProductList
-        listTitle="ALL PRODUCTS"
-        contentList={products}
-      />
-    </div>
+        {/* New iphones List */}
+        {/* <ProductList
+          listTitle="IPHONES"
+          contentList={products.filter((product) => product.category === "mobile")}
+        /> */}
+
+        {/* Used iphones List */}
+        {/* <ProductList
+          listTitle="Used Iphones"
+          contentList={products.filter((product) => product.category === "mobile" && product.condition === "USED")}
+        /> */}
+
+        <ProductList
+          listTitle="ALL PRODUCTS"
+          contentList={products}
+        />
+      </div>
+      <img src={home7} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+    </>
   );
 }
 

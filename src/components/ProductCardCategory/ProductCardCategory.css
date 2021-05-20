@@ -1,4 +1,4 @@
-.product-img {
+/* .product-img {
   height: 200px;
   width: auto;
   object-fit: cover;
@@ -9,11 +9,7 @@
   max-height: 15px;
 }
 
-/* .card-fixed-height {
-  height: 500px;
-  max-height: 500px;
-  max-width: 200px;
-} */
+
 
 .card-img-container {
   height: 270px;
@@ -70,8 +66,14 @@ html {
 .truncate-overflow::after {
   content: "";
   position: absolute;
-  right: 0; /* note: not using bottom */
+  right: 0;
   width: 1rem;
   height: 1rem;
   background: white;
-}
+} */
+
+/* .card-fixed-height {
+  height: 500px;
+  max-height: 500px;
+  max-width: 200px;
+} */
