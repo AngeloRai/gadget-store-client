@@ -1,26 +1,26 @@
-.product-img {
+.product-img-c {
   height: 200px;
   width: auto;
   object-fit: cover;
 }
 
-.badgets-fixed-height {
+.badgets-fixed-height-c {
   height: 15px;
   max-height: 15px;
 }
 
-/* .card-fixed-height {
+/* .card-fixed-height-c {
   height: 500px;
   max-height: 500px;
   max-width: 200px;
 } */
 
-.card-img-container {
+.card-img-container-c {
   height: 270px;
   max-height: 270px;
 }
 
-.card-title-fixed-height {
+.card-title-fixed-height-c {
   height: 50px;
   min-height: 50px;
   margin: 0;
@@ -28,23 +28,23 @@
   align-items: center;
 }
 
-.original-price-fixed-height {
+.original-price-fixed-height-c {
   height: 25px;
   max-height: 25px;
 }
 
-.card-outer-body {
+.card-outer-body-c {
   padding: 10px;
   height: 400px
 } 
 
-.card-description {
+.card-description-c {
   text-align: center;
   height: 85px;
   font-size: 14px;
 }
 
-.price {
+.price-c {
   min-height: 50px;
   text-align: center;
 }
