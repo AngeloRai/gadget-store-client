@@ -1,5 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import './HeroCarousel.css'
+import {Link} from 'react-router-dom'
 
 
 import carousel1 from '../../images/carousel1.png'
@@ -14,45 +15,55 @@ function HeroCarousel(props) {
 
   return (
 
-    <Carousel className='mb-5'>
+    <Carousel>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={carousel1}
-          alt="First slide"
-        />
+        <Link to="/iphone">
+          <img
+            className="d-block w-100"
+            src={carousel1}
+            alt="First slide"
+          />
+        </Link>
       </Carousel.Item>
 
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={carousel2}
-          alt="Second slide"
-        />
+        <Link to="/watch">
+          <img
+            className="d-block w-100"
+            src={carousel2}
+            alt="Second slide"
+          />
+        </Link>
       </Carousel.Item>
 
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={carousel3}
-          alt="Third slide"
-        />
+        <Link to="acessories">
+          <img
+            className="d-block w-100"
+            src={carousel3}
+            alt="Third slide"
+          />
+        </Link>
       </Carousel.Item>
 
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={carousel4}
-          alt="Forth slide"
-        />
+        <Link to="/ipad">
+          <img
+            className="d-block w-100"
+            src={carousel4}
+            alt="Forth slide"
+          />
+        </Link>
       </Carousel.Item>
 
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={carousel5}
-          alt="Fifth slide"
-        />
+        <Link to="/all-products">
+          <img
+            className="d-block w-100"
+            src={carousel5}
+            alt="Fifth slide"
+          />
+        </Link>
       </Carousel.Item>
 
     </Carousel>)

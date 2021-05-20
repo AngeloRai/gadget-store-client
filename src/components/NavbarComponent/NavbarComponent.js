@@ -25,7 +25,7 @@ function NavbarComponent() {
       collapseOnSelect
       expanded={expanded}
       expand="lg"
-      style={{backgroundColor: 'black', opacity: 0.85}} 
+      style={{backgroundColor: 'black', opacity: 0.9}} 
       variant="dark"
     >
       <Navbar.Brand to="/home">

@@ -30,7 +30,7 @@ function ProductsList(props) {
     return (
       <div className='mb-5'>
         <div className='d-flex-block text-center'>
-          <h4>{props.listTitle}</h4>
+          <h4 className='text-secondary'>{props.listTitle}</h4>
         </div>
         <Carousel
           renderButtonGroupOutside={true}
