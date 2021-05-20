@@ -68,7 +68,7 @@ function App() {
                 component={ProductDelete}
               />
               <ProtectedRoute exact path="/checkout" component={Checkout} />
-              <Route exact path="/order/success" component={OrderSuccess} />
+              <Route exact path="/order/success" component={OrderSuccess}/>
             </div>
           </Switch>
           <Footer />

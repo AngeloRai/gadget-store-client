@@ -46,7 +46,7 @@ function Iphone() {
 
   return (
     <>
-      <img src={iphone} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+      <img src={iphone} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='iphone' />
       <div className="container mt-5" style={{ minHeight: "calc(100vh - 265px)" }}>
         <div className="container-fluid" style={{ paddingBottom: "100px" }}>
           <div className="form-group mb-4 ">

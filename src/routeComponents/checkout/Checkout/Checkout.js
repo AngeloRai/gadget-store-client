@@ -41,13 +41,17 @@ function Checkout() {
   async function handleSubmit() {
     try {
       const stripe = await stripePromise;
-
+      console.log(state)
+      // console.log(loggedInUser)
       const data = {
         buyerId: loggedInUser.user._id,
         products: state.map((product) => {
-          return { productId: product._id, qtt: product.qtt };
+          console.log(product)
+          return { productId: product._id, qtt: product.selectedQuantity };
         }),
       };
+
+      console.log(data)
 
       const response = await api.post("/create-checkout-session", data);
 

@@ -48,7 +48,7 @@ function ProductFeed() {
 
   return (
     <>
-      <img src={allProducts} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+      <img src={allProducts} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='all products' />
       <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
         <div className="container-fluid" style={{ paddingBottom: "100px" }}>
           <div className="form-group mb-4 ">
