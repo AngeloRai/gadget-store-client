@@ -17,6 +17,7 @@ function ProductCard(props) {
             className="card-img product-img"
             src={props.product.image_url[0]}
             alt="product"
+            style={{height: "150px"}}
           />
         </div>
 
@@ -34,6 +35,9 @@ function ProductCard(props) {
           >
             <small>{props.product.model}</small>
           </h5>
+         
+
+
 
           <div className='original-price-fixed-height text-center'>
             {props.product.discount ? <span className="card-text" style={{fontSize: '10px', textDecoration: "line-through", color: "darkgray"}}>
@@ -41,22 +45,26 @@ function ProductCard(props) {
                 "pt-BR",
                 { style: "currency", currency: "BRL" }
               )}
-            </span> : null}
+            </span> : <span className="card-text text-center" style={{fontSize: '10px', textDecoration: "line-through", color: "white"}}>|</span>}
           </div>
-          
           {props.product.discount ? 
-          <h5 className="card-text text-center">
+          <h5 className="card-text price">
             {Number((props.product.price * (100-props.product.discount))/100).toLocaleString(
               "pt-BR",
               { style: "currency", currency: "BRL" }
             )}
           </h5> : 
-          <h5 className="card-text text-center">
+          <h5 className="card-text price">
           {Number(props.product.price ).toLocaleString(
           "pt-BR",
             { style: "currency", currency: "BRL" }
           )}
         </h5>}
+
+
+
+
+
         </div>
       </div>
     </Link>

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import { useContext, useState } from "react";
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { AuthContext } from "../../contexts/authContext";
 import logo from "../../images/GDT-logo1.png";
 import "./NavbarComponent.css";
@@ -60,7 +60,7 @@ function NavbarComponent() {
             onClick={() => setExpanded(false)}
             className="d-flex justify-content-center nav-link"
             activeClassName="active"
-            to="/iphone"
+            to="/ipad"
           >
             IPAD
           </NavLink>
@@ -68,7 +68,7 @@ function NavbarComponent() {
             onClick={() => setExpanded(false)}
             className="d-flex justify-content-center nav-link"
             activeClassName="active"
-            to="/iphone"
+            to="/ipad"
           >
             APPLE WATCH
           </NavLink>
