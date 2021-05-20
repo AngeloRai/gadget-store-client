@@ -7,7 +7,7 @@ import watch from "../../../images/watch.png"
 function Ipad() {
   const [products, setProduct] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [searchWord, setSearchWord] = useState('');
+  const [searchWord, setSearchWord] = useState("");
 
   useEffect(() => {
     async function fetchProducts() {
@@ -25,13 +25,14 @@ function Ipad() {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        let filteredArray = []
+        let filteredArray = [];
+        
         if (products.length !== 0 && searchWord.length !== 0) {
           filteredArray = products.filter((gadget) =>
             gadget.model.toLowerCase().includes(searchWord.toLowerCase())
           );
         }
-        setFilteredProducts([...filteredArray])
+        setFilteredProducts([...filteredArray]);
       } catch (err) {
         console.error(err);
       }
@@ -48,17 +49,17 @@ function Ipad() {
     <img src={watch} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='watch' />
     <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
       <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-        <div className="form-group mb-4 ">
-          <label htmlFor="searchWord"><h6 className="text-secondary" >SEARCH</h6></label>
-          <input
-            type="text"
-            className="w-25 form-control shadow-none no-border"
-            id="searchWord"
-            name="searchWord"
-            onChange={handleChange}
-            value={searchWord}
-          />
-        </div>
+        <div className="form-group mb-4 d-flex justify-content-center">
+        <input
+          placeholder="SEARCH"
+          type="text"
+          className="w-50 form-control shadow-none no-border"
+          id="searchWord"
+          name="searchWord"
+          onChange={handleChange}
+          value={searchWord}
+        />
+      </div>
 
         {searchWord && <div className="container-fluid">
           {/* New Watch List */}

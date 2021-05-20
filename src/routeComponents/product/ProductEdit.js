@@ -3,6 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 
 import api from "../../apis/index";
 import ProductForm from "./ProductForm";
+import Spinner from "../../components/Spinner";
 
 function ProductEdit() {
   const [state, setState] = useState({
@@ -21,7 +22,8 @@ function ProductEdit() {
 
   const { id } = useParams();
   const history = useHistory();
-
+  const [loading, setLoading] = useState(false);
+  const [loadSuccess, setloadSuccess] = useState(false);
   // Pré-popula o formulário com os dados do produto através do id da URL
   useEffect(() => {
     async function fetchBeer() {
@@ -54,9 +56,11 @@ function ProductEdit() {
       uploadData.append("image", file);
 
       const response = await api.post("/image-upload", uploadData);
-
+      setLoading(false);
+      setloadSuccess(true);
       return response.data.fileUrl;
     } catch (err) {
+      setLoading(false);
       console.error(err);
     }
   }
@@ -64,7 +68,7 @@ function ProductEdit() {
   async function handleSubmit(event) {
     try {
       event.preventDefault();
-
+      setLoading(true);
       // Fazendo um backup da imagem atual
       let uploadedImageUrl = state.image_url;
       // Verifica se o usuário selecionou um novo arquivo para trocar a imagem, pois o valor que já estará armazenado em image_url é a URL da imagem atual armazenada no Cloudinary
@@ -95,6 +99,12 @@ function ProductEdit() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
+      {loading ? (
+        <Spinner className="mt-5" color="text-secondary" />
+      ) : null}
+      {loadSuccess ? (
+        (<div className="h4 text-success">Loaded Successfully!</div>)
+      ) : null}
     </div>
   );
 }

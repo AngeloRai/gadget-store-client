@@ -4,12 +4,14 @@ import { useHistory } from "react-router-dom";
 import api from "../../apis/index";
 
 import ProductForm from "./ProductForm";
-
+import Spinner from "../../components/Spinner";
 
 
 
 function ProductCreate() {
   const history = useHistory();
+  const [loading, setLoading] = useState(false);
+  const [loadSuccess, setloadSuccess] = useState(false);
 
   const [state, setState] = useState({
     category: "",
@@ -47,17 +49,18 @@ function ProductCreate() {
       }
 
       const response = await api.post("/image-upload", uploadData);
-
+      setLoading(false);
+      setloadSuccess(true);
       return response.data.fileUrl;
     } catch (err) {
+      setLoading(false);
       console.error(err);
     }
   }
-
   async function handleSubmit(event) {
     try {
       event.preventDefault();
-
+      setLoading(true);
       let uploadedImageUrl = "";
       let auxArr = []
       if (state.image_url) {
@@ -66,8 +69,7 @@ function ProductCreate() {
           auxArr.push(uploadedImageUrl)
         }
       }
-
-      const response = await api.post("/product", {
+      await api.post("/product", {
         ...state,
         image_url: auxArr,
       });
@@ -78,18 +80,21 @@ function ProductCreate() {
       console.error(err);
     }
   }
-
   return (
     <div>
       <h1>New Gadget </h1>
-
       <hr />
-
       <ProductForm
         state={state}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
+      {loading ? (
+        <Spinner className="mt-5" color="text-secondary" />
+      ) : null}
+      {loadSuccess ? (
+        (<div className="h4 text-success">Loaded Successfully!</div>)
+      ) : null}
     </div>
   );
 }

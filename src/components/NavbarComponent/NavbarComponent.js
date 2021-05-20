@@ -101,11 +101,13 @@ function NavbarComponent() {
           ) : null}
         </Nav>
         {loggedInUser.user.name ? (
-          <div className="d-flex justify-content-center">
+
+          <div className="d-flex  justify-content-center " >
+
             <Dropdown>
               <Dropdown.Toggle
                 id="dropdown-basic"
-                style={{ backgroundColor: "#0a0a0a", border: "none" }}
+                style={{ backgroundColor: "#0a0a0a", border: "none"}}
               >
                 <span className="mr-2">
                   Hi, {loggedInUser.user.name.split(" ")[0]}!
