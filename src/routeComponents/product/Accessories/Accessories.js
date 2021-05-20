@@ -45,7 +45,7 @@ function Ipad() {
 
   return (
     <>
-      <img src={accessories} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='accessories' />
+      <img src={accessories} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='accessories'/>
       <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
         <div className="container-fluid" style={{ paddingBottom: "100px" }}>
           <div className="form-group mb-4 ">
@@ -70,7 +70,7 @@ function Ipad() {
           <div className="">
             {/* Accessory List */}
             <ProductSingleCategory
-              listTitle="ACCESSORIES"
+              listTitle=""
               contentList={products.filter(
                 (product) => product.category === "accessories")}
             />

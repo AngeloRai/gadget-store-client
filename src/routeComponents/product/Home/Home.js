@@ -5,8 +5,9 @@ import ProductList from "../../../components/ProductList/ProductList";
 import api from "../../../apis/index";
 import './Home.css'
 import home7 from "../../../images/home7.png"
-import home5 from "../../../images/home5.png"
 import home8 from "../../../images/home8.png"
+import iphone from "../../../images/iphone.png"
+import allProducts from "../../../images/allProducts.png"
 
 
 function ProductFeed() {
@@ -29,7 +30,7 @@ function ProductFeed() {
   return (
     <>
       <Link to="/iphone">
-        <img src={home5} className='img-fluid mb-4 w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+        <img src={iphone} className='img-fluid mb-4 w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
       </Link>
 
       <div className="container-fluid" style={{ paddingBottom: "50px" }}>
@@ -38,7 +39,7 @@ function ProductFeed() {
           contentList={products.filter((product) => product.category === "mobile")}
         />
       </div>
-      <img src={home8} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+      <img src={allProducts} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
       <div className="container-fluid" style={{ paddingBottom: "50px" }}>
 
         <ProductList
