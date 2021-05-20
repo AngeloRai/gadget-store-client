@@ -24,15 +24,19 @@ function ProductCard(props) {
             {props.product.discount ? <span className="badge bg-danger text-white justify-content-evenly mx-1" style={{fontSize: "10px"}}>{props.product.discount}%</span> : null
             }
           </div>
-          <h4
+          <h5
             title={props.product.model}
-            className="card-title card-title-fixed-height text-center my-2 text-secondary"
+            className="card-title card-title-fixed-height text-center my-2 text-secondary "
           >
             <strong>{props.product.model}</strong>
-          </h4>
-          <div className='card-description my-3'>
+          </h5>
+          <div className='card-description my-3 truncate-overflow'>
           {props.product.description}
           </div>
+
+
+
+          
           <div className='original-price-fixed-height text-center'>
             {props.product.discount ? <span className="card-text" style={{fontSize: '10px', textDecoration: "line-through", color: "darkgray"}}>
               {Number(props.product.price).toLocaleString(
@@ -54,6 +58,10 @@ function ProductCard(props) {
             { style: "currency", currency: "BRL" }
           )}
         </h5>}
+
+
+
+        
       </div>
     </Link>
   );

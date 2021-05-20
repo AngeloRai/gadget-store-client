@@ -13,6 +13,8 @@ import Navbar from "../NavbarComponent/NavbarComponent";
 import HeroCarousel from '../HeroCarousel/HeroCarousel'
 import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
 import Iphone from '../../routeComponents/product/Iphone/Iphone'
+import Ipad from '../../routeComponents/product/Ipad/Ipad'
+
 import Footer from '../Footer/Footer'
 
 import Home from "../../routeComponents/product/Home/Home";
@@ -39,6 +41,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/all-products" component={AllProducts} />
               <Route exact path="/iphone" component={Iphone} />
+              <Route exact path="/ipad" component={Ipad} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/forgot-password" component={ForgotPassword} />
