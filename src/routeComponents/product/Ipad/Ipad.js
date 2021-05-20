@@ -45,7 +45,7 @@ function Ipad() {
 
   return (
     <>
-      <img src={ipad} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+      <img src={ipad} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='ipad' />
       <div className="container mt-5" style={{ minHeight: "calc(100vh - 265px)" }}>
 
         <div className="container-fluid" style={{ paddingBottom: "100px" }}>
