@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ProductList from "../../../components/ProductList/ProductList";
 import api from "../../../apis/index";
 import "./AllProducts.css";
+import allProducts from "../../../images/allProducts.png"
 
 function ProductFeed() {
   const [products, setProduct] = useState([]);
@@ -23,17 +24,17 @@ function ProductFeed() {
     fetchProducts();
   }, []);
 
-  
+
   useEffect(() => {
     async function fetchProducts() {
       try {
         let filteredArray = []
-        if (products.length!==0 && searchWord.length!==0) {
+        if (products.length !== 0 && searchWord.length !== 0) {
           filteredArray = products.filter((gadget) =>
-          gadget.model.toLowerCase().includes(searchWord.toLowerCase())
-        );
-      }
-      setFilteredProducts([...filteredArray])
+            gadget.model.toLowerCase().includes(searchWord.toLowerCase())
+          );
+        }
+        setFilteredProducts([...filteredArray])
       } catch (err) {
         console.error(err);
       }
@@ -46,48 +47,53 @@ function ProductFeed() {
   }
 
   return (
-    <div className="container-fluid" style={{ paddingBottom: "100px"}}>
-      <div className="form-group mb-4 ">
-          <label htmlFor="searchWord"><h6 className="text-secondary" >SEARCH</h6></label>
-          <input
-            type="text"
-            className="w-25 form-control shadow-none no-border"
-            id="searchWord"
-            name="searchWord"
-            onChange={handleChange}
-            value={searchWord}
-          />
-        </div>
-        
-        {searchWord && <div className="container-fluid">
-        {/* New iphones List */}
-        <ProductList
-          listTitle="SEARCH RESULTS"
-          contentList={filteredProducts}
-        />
-      </div>}
+    <>
+      <img src={allProducts} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='man holding an iphone' />
+      <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
+        <div className="container-fluid" style={{ paddingBottom: "100px" }}>
+          <div className="form-group mb-4 ">
+            <label htmlFor="searchWord"><h6 className="text-secondary" >SEARCH</h6></label>
+            <input
+              type="text"
+              className="w-25 form-control shadow-none no-border"
+              id="searchWord"
+              name="searchWord"
+              onChange={handleChange}
+              value={searchWord}
+            />
+          </div>
 
-      {/* Contains all the lists shown in the home-screen */}
-      <div className="container-fluid">
-        {/* New iphones List */}
-        <ProductList
-          listTitle="NEW IPHONES"
-          contentList={products.filter(
-            (product) =>
-              product.category === "mobile" && product.condition === "NEW"
-          )}
-        />
+          {searchWord && <div className="container-fluid">
+            {/* New iphones List */}
+            <ProductList
+              listTitle="SEARCH RESULTS"
+              contentList={filteredProducts}
+            />
+          </div>}
+
+          {/* Contains all the lists shown in the home-screen */}
+          <div className="container-fluid">
+            {/* New iphones List */}
+            <ProductList
+              listTitle="NEW IPHONES"
+              contentList={products.filter(
+                (product) =>
+                  product.category === "mobile" && product.condition === "NEW"
+              )}
+            />
+          </div>
+          {/* Used iphones List */}
+          <ProductList
+            listTitle="USED IPHONES"
+            contentList={products.filter(
+              (product) =>
+                product.category === "mobile" && product.condition === "USED"
+            )}
+          />
+          <ProductList listTitle="ALL PRODUCTS" contentList={products} />
+        </div>
       </div>
-      {/* Used iphones List */}
-      <ProductList
-        listTitle="USED IPHONES"
-        contentList={products.filter(
-          (product) =>
-            product.category === "mobile" && product.condition === "USED"
-        )}
-      />
-      <ProductList listTitle="ALL PRODUCTS" contentList={products} />
-    </div>
+    </>
   );
 }
 
