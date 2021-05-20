@@ -14,6 +14,8 @@ import HeroCarousel from '../HeroCarousel/HeroCarousel'
 import AllProducts from '../../routeComponents/product/AllProducts/AllProducts'
 import Iphone from '../../routeComponents/product/Iphone/Iphone'
 import Ipad from '../../routeComponents/product/Ipad/Ipad'
+import Watch from '../../routeComponents/product/Watch/Watch'
+import Accessories from '../../routeComponents/product/Accessories/Accessories'
 
 import Footer from '../Footer/Footer'
 
@@ -38,7 +40,7 @@ function App() {
             <Route exact path="/" component={HeroCarousel} />
             <Switch>
               <Route exact path="/" component={Home} />
-              <div className="container mt-5" style={{ minHeight: "calc(100vh - 265px)" }}>
+              <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
                 <Route exact path="/all-products" component={AllProducts} />
                 <Route exact path="/iphone" component={Iphone} />
                 <Route exact path="/ipad" component={Ipad} />
@@ -46,6 +48,8 @@ function App() {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/forgot-password" component={ForgotPassword} />
                 <Route exact path="/password-reset" component={ResetPassword} />
+                <Route exact path="/watch" component={Watch} />
+                <Route exact path="/accessories" component={Accessories} />
                 <ProtectedRoute exact path="/profile" component={Profile} />
                 <AdminRoute
                   exact

@@ -1,16 +1,45 @@
 footer {
   position: absolute;
   width: 100%;
-  
   text-align: left;
-  
   bottom: 0;
 }
 
-@media (max-width: 750px)
-{
-  .contacts
-   {
+.fa-icons {
+  font-size: 16px;
+}
+
+.name-container{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+
+@media (max-width: 750px) {
+  .developed {
     display: none;
-   }
+  }
+  
+.name-text {
+ text-align: center;
+}
+
+  .footer-contacts {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .fa-icons {
+    font-size: 12px;
+  }
+
+  .name-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
