@@ -68,7 +68,7 @@ function NavbarComponent() {
             onClick={() => setExpanded(false)}
             className="d-flex justify-content-center nav-link"
             activeClassName="active"
-            to="/ipad"
+            to="/watch"
           >
             APPLE WATCH
           </NavLink>
@@ -76,7 +76,7 @@ function NavbarComponent() {
             onClick={() => setExpanded(false)}
             className="d-flex justify-content-center nav-link"
             activeClassName="active"
-            to="/iphone"
+            to="/accessories"
           >
             ACCESSORIES
           </NavLink>
