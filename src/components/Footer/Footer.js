@@ -1,9 +1,4 @@
-import {
-  FaInstagram,
-  FaFacebookSquare,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Footer.css";
 
 function Footer() {

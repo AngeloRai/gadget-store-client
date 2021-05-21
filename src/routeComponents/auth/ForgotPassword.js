@@ -12,8 +12,6 @@ function ForgotPassword() {
     try {
       const response = await api.post("/forgot-password", { email });
 
-      console.log(response);
-
       setMessage({
         text: "Please check your inbox for the password reset link.",
         error: false,

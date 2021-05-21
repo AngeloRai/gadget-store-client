@@ -92,7 +92,7 @@ function ProductFeed() {
           />
           <ProductList listTitle="ALL PRODUCTS" contentList={products} />
         </div>
-      )}
+      
       {/* Contains all the lists shown in the home-screen */}
       <div className="container-fluid">
         {/* New iphones List */}
@@ -103,6 +103,7 @@ function ProductFeed() {
               product.category === "mobile" && product.condition === "NEW"
           )}
         />
+      </div>
       </div>
     </>
   );

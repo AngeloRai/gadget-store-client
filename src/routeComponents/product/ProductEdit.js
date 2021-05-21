@@ -29,8 +29,7 @@ function ProductEdit() {
     async function fetchBeer() {
       try {
         const response = await api.get(`/product/${id}`);
-
-        console.log(response.data);
+       
         setState({ ...response.data });
       } catch (err) {
         console.error(err);

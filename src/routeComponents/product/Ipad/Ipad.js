@@ -46,11 +46,10 @@ function Ipad() {
 
   return (
     <>
-      <img src={ipad} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='ipad' />
+      <img src={ipad} className='img-fluid w-100' style={{ opacity: 0.9 }} alt='iphone' />
       <div className="container mt-5" style={{ minHeight: "calc(100vh - 265px)" }}>
-
         <div className="container-fluid" style={{ paddingBottom: "100px" }}>
-         <div className="form-group mb-4 d-flex justify-content-center">
+           <div className="form-group mb-4 d-flex justify-content-center">
         <input
           placeholder="SEARCH"
           type="text"
@@ -61,17 +60,16 @@ function Ipad() {
           value={searchWord}
         />
       </div>
-          </div>
 
           {searchWord && <div className="container-fluid">
-            {/* New Ipads List */}
+            {/* New ipad List */}
             <ProductSingleCategory
               listTitle="Search Result"
               contentList={filteredProducts}
             />
           </div>}
           <div className="">
-            {/* Ipad List */}
+            {/* iPad List */}
             <ProductSingleCategory
               listTitle=""
               contentList={products.filter(

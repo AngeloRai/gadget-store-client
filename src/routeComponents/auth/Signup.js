@@ -24,51 +24,9 @@ const SignupSchema = Yup.object().shape({
 });
 
 function Signup() {
-  // O useState retorna uma array que sempre tem 2 elementos: o índice 0 sendo o seu state (que não precisa mais ser somente um objeto), e o índice 1 sendo uma função para atualizar esse state
-  // const [state, setState] = useState({
-  //   name: "",
-  //   email: "",
-  //   password: "",
-  //   phoneNumber: "",
-  // });
-  // const [address, setAddress] = useState({
-  //   street: "",
-  //   neighbourhood: "",
-  //   city: "",
-  //   postCode: "",
-  //   stateOrProvince: "",
-  //   country: "",
-  // });
-
-  const history = useHistory();
-
-  // function handleStateChange(event) {
-  //   // a função de atualização de state dos Hooks é destrutiva, ou seja, sobrescreve o state pelo que vc mandar. Para salvar o state atual antes da atualização, utilize o operador spread:
-  //   setState({ ...state, [event.target.name]: event.target.value });
-  // }
-
-  // function handleAddressChange(event) {
-  //   setAddress({ ...address, [event.target.name]: event.target.value });
-  // }
-
-  // async function handleSubmit(event) {
-  //   try {
-  //     event.preventDefault();
-
-  //     const response = await api.post("/signup", {
-  //       ...state,
-  //       address: { ...address },
-  //     });
-
-  //     console.log(response);
-
-  //     history.push("/login");
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // }
-
-  return (
+   const history = useHistory();
+  
+   return (
     <Formik
       initialValues={{
         name: "",
@@ -107,9 +65,7 @@ function Signup() {
               country,
             },
           });
-
-          console.log(response);
-
+          
           setSubmitting(false);
 
           history.push("/login");

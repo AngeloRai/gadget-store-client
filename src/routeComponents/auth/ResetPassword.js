@@ -40,8 +40,6 @@ function ResetPassword() {
           userId,
         });
 
-        console.log(response);
-
         history.push("/login");
       } else {
         alert("Passwords don't match!");
