@@ -1,3 +1,9 @@
+## Check out the site throguh this link: [PRIME GADGET](https://prime-gadgets.netlify.app/)
+
+## [Server Side Repo](https://github.com/AngeloRai/gadget-store-server)
+
+## [Here](https://docs.google.com/presentation/d/1S4o0DojhbV2nGNsa86-YobuvAQpd0jPye91y3DTE0ow/edit?ts=60a6a850#slide=id.gd39d7d08c1_1_54) you can understand a bit about the project by checking out [this slide](https://docs.google.com/presentation/d/1S4o0DojhbV2nGNsa86-YobuvAQpd0jPye91y3DTE0ow/edit?ts=60a6a850#slide=id.gd39d7d08c1_1_54)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
