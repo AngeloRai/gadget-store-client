@@ -36,8 +36,10 @@ function App() {
     <BrowserRouter>
       <AuthContextComponent>
         <CartContextComponent>
-          <Navbar />
-          <Route exact path="/" component={HeroCarousel} />
+          <div style={{ position: "relative", zIndex: "1" }}>
+            <Navbar />
+            <Route exact path="/" component={HeroCarousel} />
+          </div>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/iphone" component={Iphone} />
@@ -68,7 +70,7 @@ function App() {
                 component={ProductDelete}
               />
               <ProtectedRoute exact path="/checkout" component={Checkout} />
-              <Route exact path="/order/success" component={OrderSuccess}/>
+              <Route exact path="/order/success" component={OrderSuccess} />
             </div>
           </Switch>
           <Footer />

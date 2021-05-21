@@ -52,15 +52,15 @@ function ProductFeed() {
       <div className="container mt-5" style={{ minHeight: "calc(100vh - 235px)" }}>
         <div className="container-fluid" style={{ paddingBottom: "100px" }}>
           <div className="form-group mb-4 d-flex justify-content-center">
-        <input
-          placeholder="SEARCH"
-          type="text"
-          className="w-50 form-control shadow-none no-border"
-          id="searchWord"
-          name="searchWord"
-          onChange={handleChange}
-          value={searchWord}
-        />
+            <input
+              placeholder="SEARCH"
+              type="text"
+              className="w-50 form-control shadow-none no-border"
+              id="searchWord"
+              name="searchWord"
+              onChange={handleChange}
+              value={searchWord}
+            />
           </div>
 
           {searchWord && <div className="container-fluid">
@@ -92,19 +92,18 @@ function ProductFeed() {
           />
           <ProductList listTitle="ALL PRODUCTS" contentList={products} />
         </div>
-      
+      </div>
       {/* Contains all the lists shown in the home-screen */}
-      <div className="container-fluid">
-        {/* New iphones List */}
-        <ProductList
-          listTitle="NEW IPHONES"
-          contentList={products.filter(
-            (product) =>
-              product.category === "mobile" && product.condition === "NEW"
-          )}
-        />
-      </div>
-      </div>
+        <div className="container-fluid">
+          {/* New all product List */}
+          <ProductList
+            listTitle="NEW IPHONES"
+            contentList={products.filter(
+              (product) =>
+                product.category === "mobile" && product.condition === "NEW"
+            )}
+          />
+        </div>
     </>
   );
 }
