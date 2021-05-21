@@ -62,8 +62,6 @@ function ProductDetails() {
     }
   };
 
-  console.log(state.image_url)
-
   return (
 
     <div>

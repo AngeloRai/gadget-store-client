@@ -29,14 +29,12 @@ function ProductCreate() {
 
   function handleChange(event) {
     if (event.target.files) {
-      console.log(event.target.files)
       setState({ ...state, [event.target.name]: event.target.files });
     } else {
       setState({ ...state, [event.target.name]: event.target.value });
     }
   }
-  console.log(state)
-
+  
   async function handleFileUpload(file) {
     try {
       // FormData is a native Javasccript constructor function which creates a Form object in the multipart/form format expected in the backend
@@ -44,10 +42,6 @@ function ProductCreate() {
 
       // 'image' needs to match same value of uploadCloud.single() in the backend
       uploadData.append("image", file);
-      for (let key of uploadData.entries()) {
-        console.log(key[1]);
-      }
-
       const response = await api.post("/image-upload", uploadData);
       setLoading(false);
       setloadSuccess(true);

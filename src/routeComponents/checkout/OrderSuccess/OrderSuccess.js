@@ -9,8 +9,6 @@ function OrderSuccess() {
   const { cart, setCart } = useContext(CartContext);
   const { loggedInUser } = useContext(AuthContext);
 
-  console.log(cart);
-
   useEffect(() => {
     async function createTransaction() {
       try {
@@ -19,8 +17,6 @@ function OrderSuccess() {
             buyerId: loggedInUser.user._id,
             products: [...cart],
           });
-
-          console.log(response);
 
           setCart([]);
           localStorage.removeItem("cart");

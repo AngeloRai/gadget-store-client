@@ -25,8 +25,6 @@ function Profile() {
       try {
         const response = await api.get("/profile");
 
-        console.log(response);
-
         setState({ ...response.data });
       } catch (err) {
         console.error(err);

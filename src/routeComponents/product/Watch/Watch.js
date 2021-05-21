@@ -64,7 +64,7 @@ function Ipad() {
         {searchWord && <div className="container-fluid">
           {/* New Watch List */}
           <ProductSingleCategory
-            listTitle="Search Result"
+            listTitle="SEARCH RESULT"
             contentList={filteredProducts}
           />
         </div>}

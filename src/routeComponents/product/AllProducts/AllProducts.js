@@ -95,7 +95,7 @@ function ProductFeed() {
       </div>
       {/* Contains all the lists shown in the home-screen */}
         <div className="container-fluid">
-          {/* New iphones List */}
+          {/* New all product List */}
           <ProductList
             listTitle="NEW IPHONES"
             contentList={products.filter(

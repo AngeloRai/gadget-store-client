@@ -12,12 +12,12 @@ function NavbarComponent() {
   const [expanded, setExpanded] = useState(false);
 
   function expand() {
-    console.log(expanded);
+    
     if (expanded === false) {
       setExpanded(true);
     } else if (expanded === true) setExpanded(false);
 
-    console.log(expanded);
+    
   }
 
   return (

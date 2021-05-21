@@ -64,7 +64,7 @@ function Iphone() {
           {searchWord && <div className="container-fluid">
             {/* New iphones List */}
             <ProductSingleCategory
-              listTitle="Search Result"
+              listTitle="SEARCH RESULT"
               contentList={filteredProducts}
             />
           </div>}
